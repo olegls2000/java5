@@ -123,6 +123,5 @@ public class Main {
         System.out.print(aabbcount2 + " остаток: ");
         System.out.print(aabbcount);
 
-
     }
 }
