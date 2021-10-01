@@ -122,6 +122,5 @@ public class Main {
         int aabbcount2 = aacount / bbcount; // показывает целое число от деления
         System.out.print(aabbcount2 + " остаток: ");
         System.out.print(aabbcount);
-
     }
 }
