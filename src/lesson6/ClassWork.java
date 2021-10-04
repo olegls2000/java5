@@ -1,5 +1,7 @@
 package lesson6;
 
+import utils.BtaUtils;
+
 public class ClassWork {
 	public static void main(String[] args) {
 		Human  ivan = new Human("Ivan", "Ivanov", Gender.MAN);

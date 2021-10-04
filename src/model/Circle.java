@@ -1,5 +1,7 @@
 package model;
 
+import utils.BtaUtils;
+
 public class Circle {
 	int radius;
 	public Circle(){

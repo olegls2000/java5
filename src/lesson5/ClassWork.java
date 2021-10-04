@@ -1,5 +1,7 @@
 package lesson5;
 
+import model.Employee;
+
 public class ClassWork {
 	public static void main(String[] args) {
 		Employee vasja = new Employee();
