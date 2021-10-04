@@ -1,7 +1,7 @@
 package lesson2;
 
 //TODO rename
-public class homework_lesson_2 {
+public class HomeWork {
     public static void main(String[] args) {
         closestTo100(120, 105);
 

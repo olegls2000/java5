@@ -3,7 +3,7 @@ package lesson2;
 import utils.BtaUtils;
 
 //TODO rename
-public class Main2 {
+public class ClassWork {
 
     public static void main(String[] args) {
         if (5 > 6) {

@@ -2,7 +2,7 @@ package lesson4;
 
 
 //TODO rename
-public class HomeWorkLesson4 {
+public class HomeWork {
 
     public static void main(String[] args) {
 

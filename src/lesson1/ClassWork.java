@@ -1,7 +1,7 @@
 package lesson1;
 //TODO rename
 //TODO add home work
-public class Main {
+public class ClassWork {
 
 
     public static void main(String[] args){

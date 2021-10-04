@@ -1,7 +1,7 @@
 package lesson3;
 
 //TODO rename
-public class HomeWorkLesson3 {
+public class HomeWork {
 
     // public static void printOnly5(int[] array) { //примерно так же, как деление на два
         // for (int i = 0; i < array.length; i++)

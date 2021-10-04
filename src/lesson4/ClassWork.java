@@ -3,7 +3,7 @@ package lesson4;
 import utils.BtaUtils;
 
 //TODO rename
-public class Main4 {
+public class ClassWork {
     public static void main(String[] args) {
 
         int[] array = {1, 2, 3, 5};

@@ -3,7 +3,7 @@ package lesson3;
 import utils.BtaUtils;
 
 //TODO rename
-public class Main3 {
+public class ClassWork {
     public static void main(String[] args) {
         charPrint('a');
         charPrint('g');
