@@ -93,6 +93,4 @@ public class ClassWork {
         System.out.println("log: sum = " + sum);
         return sum;
     }
-
-
 }

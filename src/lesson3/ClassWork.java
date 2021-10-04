@@ -47,9 +47,6 @@ public class ClassWork {
         BtaUtils.printArray(array);
     }
 
-
-
-
     public static void printFrom90Till0() {
         System.out.println();
         int n = 90;
@@ -57,9 +54,7 @@ public class ClassWork {
             System.out.print(n + ",");
             n -= 5;
         }
-
     }
-
 
     public static void printOddNumbers(int count) {
         int k =1;
@@ -67,7 +62,6 @@ public class ClassWork {
             System.out.println(k + ",");
             k += 2;
         }
-
     }
     //44->0,1,2,...XX;
     public static void printFromZero(int to) {

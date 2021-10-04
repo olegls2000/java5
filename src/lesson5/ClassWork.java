@@ -1,10 +1,12 @@
 package lesson5;
 
+import model.Circle;
 import model.Employee;
 
 public class ClassWork {
 	public static void main(String[] args) {
 		Employee vasja = new Employee();
+		//TODO setter
 		vasja.firstName = "Vasilij";
 		vasja.lastName = "Vasiljev";
 		vasja.salary = 5000;
@@ -35,6 +37,7 @@ public class ClassWork {
 		Employee[] employees = {joe, vladimir};
 		Employee maxSalaryEmployee = employees[0];
 		for (Employee emp : employees) {
+			//TODO Getter
 			System.out.println("Name: " + emp.firstName);
 			System.out.println("Salary: " + emp.salary);
 			if (emp.salary > maxSalaryEmployee.salary) {

@@ -1,9 +1,11 @@
 package utils;
 
+import model.*;
+
 public class BtaUtils {
 
 	public static final int MY_LUCKY_NUMBER = 7;
-	//public static final Human JOE = new Human("Joe", "B", Gender.MAN);
+	public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
 	public static void printArray(int[] arrayToPrint) {
 		System.out.println();
@@ -75,13 +77,13 @@ public class BtaUtils {
 		return array;
 	}
 
-	/*public static double calculateDistance(Point a, Point b) {
-		double deltaXSqr = Math.pow(2, b.x - a.x);
-		double deltaYSqr = Math.pow(2, b.y - a.y);
+	public static double calculateDistance(Point a, Point b) {
+		double deltaXSqr = Math.pow(2, b.getX() - a.getX());
+		double deltaYSqr = Math.pow(2, b.getY() - a.getY());
 
 		return Math.sqrt(deltaXSqr + deltaYSqr);
 
 
 
-	}*/
+	}
 }

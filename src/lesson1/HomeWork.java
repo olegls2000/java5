@@ -3,9 +3,6 @@ package lesson1;
 public class HomeWork {
 
     public static void main(String[] args) {
-
-
-
         int a = 6;
         int b = 2;
         int c = a + b;
@@ -19,11 +16,6 @@ public class HomeWork {
         int k = 12;
         int m = n%k;
         System.out.println("division: " + n/k + ", remaining: " + m);
-
-
-
-
-
     }
 }
 

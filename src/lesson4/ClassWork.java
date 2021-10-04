@@ -32,14 +32,7 @@ public class ClassWork {
                 System.out.println(array2d[i][j]);
             }
         }
-
         //[[1,2,3,6], [5,7,9,0]]
-
-
-
-
-
-
 
     }
 }

@@ -3,14 +3,14 @@ package lesson2;
 public class Homework {
     public static void main(String[] args) {
         //L2.4
-double c;
-c = ((Math.random() * (0.9 + 0.5)) - 0.5);// - [-0.5,0.9)
+        double c;
+        c = ((Math.random() * (0.9 + 0.5)) - 0.5);// - [-0.5,0.9)
         System.out.println("random range: " + c);
 
         //L2.2
         int k;
         k = 10;
-        if(k%2==0) {
+        if (k % 2 == 0) {
             System.out.println(k + "even");
         } else {
             System.out.println(k + "odd");
@@ -35,7 +35,7 @@ c = ((Math.random() * (0.9 + 0.5)) - 0.5);// - [-0.5,0.9)
         double randomB = Math.random();
         double randomC = Math.random();
 
-        System.out.println("Numbers: " + "a: " + randomA + ", b: " + randomB + ", c: " + randomC + ". Max: " + getMaxInt(randomA, randomB,randomC));
+        System.out.println("Numbers: " + "a: " + randomA + ", b: " + randomB + ", c: " + randomC + ". Max: " + getMaxInt(randomA, randomB, randomC));
 
     }
 
@@ -54,6 +54,4 @@ c = ((Math.random() * (0.9 + 0.5)) - 0.5);// - [-0.5,0.9)
 
         return result;
     }
-
-
 }

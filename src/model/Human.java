@@ -1,9 +1,10 @@
 package model;
 
+//TODO add incaps
 public class Human {
-	String firstName;
-	String lastName;
-	Gender gender;
+	public String firstName;
+	public String lastName;
+	public Gender gender;
 
 	public Human(String firstName,
 				 String lastName,
