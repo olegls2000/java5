@@ -1,5 +1,4 @@
 package utils;
-
 import model.Human;
 import model.Gender;
 import model.Point;
