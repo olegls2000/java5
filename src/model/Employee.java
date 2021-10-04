@@ -3,7 +3,7 @@ package model;
 //TODO apply incapsulation
 
 public class Employee {
-    public int yearOfBirth;
+    public int yearOfBirth; //
     public long salary;
     public String firstName;
    public String lastName;
@@ -14,7 +14,7 @@ public class Employee {
 
 
     public Employee(int yearOfBirth, long salary, String firstName) {
-        this(yearOfBirth, salary, firstName, null); // что бы небыло у joe null во вкладке Main5
+        this(yearOfBirth, salary, firstName, null); // что бы небыло у joe null во вкладке lesson5/ClassWork
     }
 
 

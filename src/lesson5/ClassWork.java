@@ -4,7 +4,7 @@ import model.Circle;
 import model.Employee;
 
 //TODO rename
-public class Main5 {
+public class ClassWork {
     public static void main(String[] args) {
         Employee vasja = new Employee(); // new + конструктор = инициализация
         vasja.firstName = "Vasilij";
