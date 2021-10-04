@@ -1,5 +1,9 @@
 package lesson5;
 
+import model.Circle;
+import model.Employee;
+
+//TODO rename
 public class Main5 {
     public static void main(String[] args) {
         Employee vasja = new Employee(); // new + конструктор = инициализация

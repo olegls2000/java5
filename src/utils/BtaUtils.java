@@ -1,16 +1,15 @@
+package utils;
+
 import model.Human;
 import model.Gender;
 import model.Point;
+
+
 public class BtaUtils {
 
     // КОНСТАНТЫ
     public static final int MY_LUCKY_NUMBER = 7;
     public static final Human JOE = new Human("Joe", "B", Gender.MAN);
-
-
-
-
-
 
 
     public static int[] swapElements(int index1, int index2, int[] array) {
@@ -31,7 +30,7 @@ public class BtaUtils {
         return array;
     }
 
-    public static int getMaxValueIndex(int [] array) { // ищем самое высокое значение в массиве
+    public static int getMaxValueIndex(int[] array) { // ищем самое высокое значение в массиве
         int indexMax = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[indexMax]) {
@@ -43,7 +42,7 @@ public class BtaUtils {
     }
 
 
-    public static int getMinValueIndex(int [] array) { // ищем самое низкое значение в массиве
+    public static int getMinValueIndex(int[] array) { // ищем самое низкое значение в массиве
         int indexMin = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[indexMin]) {
@@ -55,11 +54,11 @@ public class BtaUtils {
     }
 
 
-    public static void printMax(int [] array) {
+    public static void printMax(int[] array) {
 
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
-            if(array[i] > max) {
+            if (array[i] > max) {
                 max = array[i];
             }
         }
@@ -67,11 +66,11 @@ public class BtaUtils {
     }
 
 
-    public static void printMin(int [] array) {
+    public static void printMin(int[] array) {
 
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
-            if(array[i] < min) {
+            if (array[i] < min) {
                 min = array[i];
             }
         }
@@ -79,13 +78,12 @@ public class BtaUtils {
     }
 
 
-
-    public static void printArray(int [] arrayToPrint) {
+    public static void printArray(int[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
-        for ( int i = 0; i < arrayToPrint.length; i++) {
+        for (int i = 0; i < arrayToPrint.length; i++) {
             System.out.print(arrayToPrint[i]);
-            if(i == arrayToPrint.length-1) {
+            if (i == arrayToPrint.length - 1) {
                 continue;
             }
             System.out.print(", ");
@@ -93,6 +91,7 @@ public class BtaUtils {
         System.out.print("]");
         System.out.println();
     }
+
     public static int getRandom(int from, int to) {
         int result = (int) (Math.random() * (to - from) + from);
 
@@ -108,7 +107,7 @@ public class BtaUtils {
     }
 
 
-    public static double calculateDistance(Point a, Point b){
+    public static double calculateDistance(Point a, Point b) {
         double deltaXSqr = Math.pow(2, b.x - a.x); // возводим в квадрат
         double deltaYSqr = Math.pow(2, b.y - a.y); // возводим в квадрат
 

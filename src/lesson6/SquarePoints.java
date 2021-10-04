@@ -1,5 +1,8 @@
 package lesson6;
 
+import model.Point;
+import model.Square;
+
 public class SquarePoints {
     public static void main(String[] args) {
         Point a = new Point(0, 0);

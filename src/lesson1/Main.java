@@ -1,6 +1,7 @@
 package lesson1;
 
-
+//TODO rename
+//TODO add home work
 public class Main {
 
 

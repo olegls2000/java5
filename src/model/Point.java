@@ -1,5 +1,5 @@
 package model;
-
+//TODO apply INCAPSULATION
 public class Point {
 
     public int x;

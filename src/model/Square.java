@@ -1,5 +1,7 @@
 package model;
 
+import utils.BtaUtils;
+//TODO apply INCAPSULATION
 public class Square {
     Point a;
     Point b;
@@ -13,10 +15,10 @@ public class Square {
         this.d = d;
     }
 
-    Double calculatePerim() {
-         double side1 = BtaUtils.calculateDistance(a, b);
-         double side2 = BtaUtils.calculateDistance(b, c);
-                return side1 * side2;
+    public Double calculatePerim() {
+        double side1 = BtaUtils.calculateDistance(a, b);
+        double side2 = BtaUtils.calculateDistance(b, c);
+        return side1 * side2;
 
 
     }

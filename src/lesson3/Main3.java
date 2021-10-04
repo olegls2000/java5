@@ -1,5 +1,8 @@
 package lesson3;
 
+import utils.BtaUtils;
+
+//TODO rename
 public class Main3 {
     public static void main(String[] args) {
         charPrint('a');
@@ -39,17 +42,12 @@ public class Main3 {
         array[1] = 9;
         array[2] = 18;
         System.out.println(array); //адрес в памяти
-        for ( int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");
         }
 
-BtaUtils.printArray(array);
-
-
+        BtaUtils.printArray(array);
     }
-
-
-
 
 
     public static void printFromZero(int to) {
@@ -100,7 +98,6 @@ BtaUtils.printArray(array);
         }
 
     }
-
 
 
     public static void charPrint(char charToPrint) {

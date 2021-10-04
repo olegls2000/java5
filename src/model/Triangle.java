@@ -1,5 +1,8 @@
 package model;
 
+import utils.BtaUtils;
+
+//TODO apply INCAPSULATION
 public class Triangle {
     Point a;
     Point b;
