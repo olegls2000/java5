@@ -1,5 +1,6 @@
-package utils;
-
+import model.Human;
+import model.Gender;
+import model.Point;
 public class BtaUtils {
 
     // КОНСТАНТЫ
