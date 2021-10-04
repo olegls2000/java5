@@ -1,5 +1,7 @@
 package model;
 
+import utils.BtaUtils;
+
 public class Triangle {
     private Point a;
     private Point b;
@@ -17,7 +19,7 @@ public class Triangle {
     }
 
     public void setA(Point a) {
-        this.a;
+        this.a = a;
     }
 
     public double calculatePerim() {

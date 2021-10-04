@@ -1,5 +1,9 @@
 package utils;
 
+import model.Gender;
+import model.Human;
+import model.Point;
+
 public class BtaUtils {
 
 
