@@ -1,5 +1,7 @@
 package lesson2;
 
+import utils.BtaUtils;
+
 public class ClassWork {
 
     public static void main(String[] args) {
