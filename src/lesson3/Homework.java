@@ -1,6 +1,6 @@
 package lesson3;
 
-public class Homework3 {
+public class Homework {
     public static void main(String[] args) {
         int[] array = new int[5];
 

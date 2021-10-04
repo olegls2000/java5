@@ -1,6 +1,6 @@
 package lesson1;
 
-public class ClassWork1 {
+public class ClassWork {
 }
 	public static void main(String[] args) {
 		System.out.println(" ______ ");

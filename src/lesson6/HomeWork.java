@@ -1,6 +1,6 @@
 package lesson6;
 
-public class HomeWork6 {
+public class HomeWork {
 
 	public static void main(String [] args) {
 		Point a = new Point(0,0);

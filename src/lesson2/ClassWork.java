@@ -1,6 +1,6 @@
 package lesson2;
 
-public class ClassWork2 {
+public class ClassWork {
 
     public static void main(String[] args) {
         if (55 != 66) {

@@ -1,6 +1,6 @@
 package lesson5;
 
-public class ClassWork5 {
+public class ClassWork {
 	public static void main(String[] args) {
 		Employee vasja = new Employee();
 		vasja.firstName = "Vasilij";

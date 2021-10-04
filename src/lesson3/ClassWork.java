@@ -1,6 +1,6 @@
 package lesson3;
 
-public class ClassWork3 {
+public class ClassWork {
     public static void main(String[] args) {
         char zz = 'z';
         charPrintSwitchCase('d');

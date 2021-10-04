@@ -1,6 +1,6 @@
 package lesson6;
 
-public class ClassWork6 {
+public class ClassWork {
 	public static void main(String[] args) {
 		Human  ivan = new Human("Ivan", "Ivanov", Gender.MAN);
 		Human  darja = new Human("Darja", "Petrova", Gender.WOMAN);
@@ -11,8 +11,8 @@ public class ClassWork6 {
 		System.out.println();
 
 		int i = 2;
-		ClassWork6.doSmth(i);
-		ClassWork6.doSmth(ivan);
+		ClassWork.doSmth(i);
+		ClassWork.doSmth(ivan);
 		System.out.println("..");
 
 		System.out.println(BtaUtils.MY_LUCKY_NUMBER);
