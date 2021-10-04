@@ -1,5 +1,6 @@
 package lesson6;
 
+import model.Point;
 import utils.BtaUtils;
 
 public class ClassWork {
