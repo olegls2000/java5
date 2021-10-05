@@ -1,5 +1,7 @@
 package utils;
 
+import model.Point;
+
 public class BtaUtils {
 
 
@@ -83,10 +85,10 @@ public class BtaUtils {
         return summ;
     }
 
-    /*public static double calculateDistance(Point a, Point b) {
-        double deltaXSqr = Math.pow(2, b.x - a.x);
-        double deltaYSqr = Math.pow(2, b.y - a.y);
+    public static double calculateDistance(Point a, Point b) {
+        double deltaXSqr = Math.pow(2, b.getX() - a.getX());
+        double deltaYSqr = Math.pow(2, b.getY() - a.getY());
 
         return Math.sqrt(deltaXSqr + deltaYSqr);
-    }*/
+    }
 }

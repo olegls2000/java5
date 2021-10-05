@@ -1,5 +1,7 @@
 package model;
 
+import utils.BtaUtils;
+
 public class Triangle {
     private Point a;
     private Point b;
@@ -40,8 +42,9 @@ public class Triangle {
     }
 
     public double calculatePerimeter() {
-
-        return 0.0d;
+        return BtaUtils.calculateDistance(a, b) +
+                BtaUtils.calculateDistance(b, c) +
+                BtaUtils.calculateDistance(a, c);
     }
 
     private void pointOneLineCheck(Point one, Point two, Point three) {
