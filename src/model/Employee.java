@@ -1,10 +1,10 @@
 package model;
 
 public class Employee {
-    int yearOfBirth;
-    long salary;
-    String firstName;
-    String lastName;
+    public int yearOfBirth;
+    public long salary;
+    public String firstName;
+    public String lastName;
 
     public Employee() {
         System.out.println("Default Constructor");
@@ -34,12 +34,12 @@ public class Employee {
     }
 
 
-    void printInfo() {
+    public void printInfo() {
         System.out.println("My name is:" + this.firstName);
     }
 // OVERLOAD !!!!!!!
 
-    void printInfo(int time) {
+    public void printInfo(int time) {
         System.out.println("My name is:" + this.firstName);
     }
 

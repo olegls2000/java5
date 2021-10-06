@@ -75,6 +75,12 @@ public class BtaUtils {
         return result;
     }
 
+    //Check array for free
+
+
+
+
+
     /* swap   */
     public static int[] swapElementsInArray(int index1, int index2, int[] array) {
         int temp = array[index1];
