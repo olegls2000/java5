@@ -2,10 +2,35 @@ package model;
 
 //TODO add incapsulation
 public class Employee {
-	public int yearOfBirth;
-	public long salary;
-	public String firstName;
-	public String lastName;
+	private int yearOfBirth;
+	private long salary;
+	private String firstName;
+	private String lastName;
+
+	public int getYearOfBirth(){
+		return yearOfBirth;
+	}
+	public long getSalary() {
+		return salary;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setYearOfBirth(int newYearOfBirth) {
+		yearOfBirth = newYearOfBirth;
+	}
+	public void setSalary(long newSalary) {
+		salary = newSalary;
+	}
+	public void setFirstName(String newFirstName) {
+		firstName = newFirstName;
+	}
+	public void setLastName(String newLastName) {
+		lastName = newLastName;
+	}
 
 	public Employee() {
 		System.out.println("Default Constructor");

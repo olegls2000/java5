@@ -2,9 +2,28 @@ package model;
 
 //TODO add incaps
 public class Human {
-	public String firstName;
-	public String lastName;
-	public Gender gender;
+	private String firstName;
+	private String lastName;
+	private Gender gender;
+
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName(){
+		return lastName;
+	}
+	public Gender getGender(){
+		return gender;
+	}
+	public void setFirstName(String newFirstName) {
+		firstName = newFirstName;
+	}
+	public void setLastName(String newLastName) {
+		lastName = newLastName;
+	}
+	public void setGender(Gender newGender) {
+		gender = newGender;
+	}
 
 	public Human(String firstName,
 				 String lastName,

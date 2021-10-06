@@ -11,7 +11,7 @@ public class HomeWork {
 		Point c = new Point(2, 0);
 
 		Triangle triangle = new Triangle(a,b,c);
-		double perim = triangle.calculatePerim();
+		double perim = triangle.calculatePerimeter();
 		triangle.getA();
 		triangle.setA(new Point(1,2));
 

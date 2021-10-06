@@ -10,7 +10,7 @@ public class ClassWork {
         int[] arrayGenerated = BtaUtils.generateArray(1,1000,5);
         BtaUtils.printArray(arrayGenerated);
 
-        //int maxIndex = BtaUtils.printMaxValue(arrayGenerated);
+        int maxIndex = BtaUtils.printMaxValue(arrayGenerated);
         int minIndex = BtaUtils.getMinValueIndex(arrayGenerated);
 
         //int temp = arrayGenerated[maxIndex];

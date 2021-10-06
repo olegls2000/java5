@@ -86,4 +86,7 @@ public class BtaUtils {
 
 
 	}
+
+	public static int printMaxValue(int[] arrayGenerated) {
+	}
 }
