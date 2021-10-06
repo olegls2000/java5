@@ -1,5 +1,8 @@
 package lesson6;
 
+import model.Point;
+import model.Triangle;
+
 public class HomeWork {
 
 	public static void main(String [] args) {
