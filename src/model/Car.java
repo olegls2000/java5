@@ -9,11 +9,11 @@ public class Car {
 
     private int price;
     private int weight;
-
+//TODO Rename
     public enum colour {
         RED, WHITE, BLACK
     }
-
+// TODO use Enum
     public Car(int price, int weight, String colour) {
         priceCheck(price);
         this.price = price;
