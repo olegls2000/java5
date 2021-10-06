@@ -43,7 +43,7 @@ public class ClassWork {
     }
 
     public static void doSmth(Human human) {
-        human.lastName = "NewLastName";
+        human.setLastName("NewLastName");
         human = new Human();
     }
 }
