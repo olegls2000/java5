@@ -3,6 +3,7 @@ package model;
 import utils.BtaUtils;
 
 public class Rectangle {
+    //TODO: incaps
     Point a;
     Point b;
     Point c;

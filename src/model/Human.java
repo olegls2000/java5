@@ -2,6 +2,7 @@ package model;
 
 //TODO add incaps
 public class Human {
+    //TODO: incaps
     public String firstName;
     public String lastName;
     public Gender gender;

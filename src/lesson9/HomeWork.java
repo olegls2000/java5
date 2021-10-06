@@ -5,7 +5,7 @@ import model.Car;
 public class HomeWork {
 
     public static void main(String[] args) {
-
+        //TODO: rename
         Car BentleyContinental = new Car(350000, 2450, CarColor.BlackShwartz);
         Car LadaBaklazhan = new Car(1200, 1567, CarColor.BaklazanPurple);
         Car HyundaiI40 = new Car(24700, 2230, CarColor.WHITE);
