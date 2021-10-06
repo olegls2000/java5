@@ -1,8 +1,8 @@
 package model;
 
 public class Car {
-    private static final int MIN_PRICE = 80_000;
-    private static final int MAX_PRICE = 400_000;
+    private static final int MIN_PRICE = 3_000;
+    private static final int MAX_PRICE = 100_000;
 
     private int price;
     private int weight;
@@ -25,4 +25,10 @@ public class Car {
         priceCheck(price);
         this.price = price;
     }
+
+    public int getPrice() {
+        return price;
+    }
+
+
 }
