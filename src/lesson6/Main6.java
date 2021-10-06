@@ -1,10 +1,8 @@
 package lesson6;
-
 import model.Gender;
 import model.Human;
 import model.Point;
 import utils.BtaUtils;
-
 //TODO rename
 public class Main6 {
 

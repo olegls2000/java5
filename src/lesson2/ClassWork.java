@@ -1,10 +1,7 @@
 package lesson2;
-
 import utils.BtaUtils;
-
 //TODO rename
 public class ClassWork {
-
     public static void main(String[] args) {
         if (5 > 6) {
             System.out.println("5"); // false
@@ -18,11 +15,8 @@ public class ClassWork {
         } else {
             System.out.println("b = False");
         }
-
         System.out.println("Random " + (int) (Math.random() * 2)); // рандом между 0 и 1
         System.out.println("Random " + BtaUtils.getRandom(00, 330));
-
-
         int a = 3;
         int b = 3;
         int c = 3;
@@ -39,8 +33,6 @@ public class ClassWork {
         } else {
             System.out.println("Triangle impossible");
         }
-
-
         boolean cond1 = a + b > c;
         boolean cond2 = b + c > a;
         boolean cond3 = a + c > b;
@@ -50,18 +42,10 @@ public class ClassWork {
             System.out.println("Triangle impossible");
         }
 
-
-
-
-
-
-
         checkTriangle(a, b, c);
         checkTriangle(44, 54, 39);
         checkTriangle(440, 540, 390);
         checkTriangle(404, 504, 309);
-
-
 
         printReport(6000, 700); // относится к массиву ниже
         printReport(9000, 800);
@@ -74,14 +58,7 @@ public class ClassWork {
         int m3 = 100;
         boolean b10 = m1 > m2;
         //System.out.println(m1 > m2) (+ b10);
-
-
-
-
     }
-
-
-
     public static void checkTriangle(int sideA, int sideB, int sideC){
         boolean cond1 = sideA + sideB > sideC;
         boolean cond2 = sideB + sideC > sideA;

@@ -1,8 +1,6 @@
 package lesson6;
-
 import model.Point;
 import model.Square;
-
 public class SquarePoints {
     public static void main(String[] args) {
         Point a = new Point(0, 0);
@@ -12,7 +10,6 @@ public class SquarePoints {
 
         Square square = new Square(a, b, c, d);
         double perim = square.calculatePerim();
-
         System.out.println("Perim = " + perim);
     }
 }

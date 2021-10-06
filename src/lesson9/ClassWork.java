@@ -4,7 +4,6 @@ import model.AutoStore;
 import model.Car;
 import model.Director;
 import model.Slave;
-
 public class ClassWork {
     public static void main(String[] args) {
         Car bmw = new Car(3000, 1500);

@@ -1,5 +1,4 @@
 package model;
-
 import utils.BtaUtils;
 //TODO apply INCAPSULATION
 public class Square {
@@ -19,7 +18,5 @@ public class Square {
         double side1 = BtaUtils.calculateDistance(a, b);
         double side2 = BtaUtils.calculateDistance(b, c);
         return side1 * side2;
-
-
     }
 }

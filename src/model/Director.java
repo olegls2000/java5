@@ -1,31 +1,16 @@
 package model;
 
-public class Director {
-    private int salary;
-    private String firstName;
+public class Director extends AbstractWorker {
     private String department;
 
     public Director(int salary, String firstName, String department) {
-        this.salary = salary;
-        this.firstName = firstName;
+        super(salary, firstName);
         this.department = department;
     }
 
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+public Director() {
+        System.out.println("Director constr");
+}
 
     public String getDepartment() {
         return department;
@@ -33,5 +18,12 @@ public class Director {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Director{" +
+                "department='" + department + '\'' +
+                "} " + super.toString();
     }
 }

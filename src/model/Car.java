@@ -25,10 +25,7 @@ public class Car {
         priceCheck(price);
         this.price = price;
     }
-
     public int getPrice() {
         return price;
     }
-
-
 }

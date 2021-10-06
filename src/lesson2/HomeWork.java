@@ -1,5 +1,4 @@
 package lesson2;
-
 //TODO rename
 public class HomeWork {
     public static void main(String[] args) {

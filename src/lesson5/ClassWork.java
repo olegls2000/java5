@@ -1,8 +1,6 @@
 package lesson5;
-
 import model.Circle;
 import model.Employee;
-
 //TODO rename
 public class ClassWork {
     public static void main(String[] args) {

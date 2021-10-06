@@ -1,8 +1,6 @@
 package model;
-
 //TODO add incapsulation
 public class Human {
-
    public  String firstName;
     public String lastName;
     public Gender gender; // поле enum в gender
