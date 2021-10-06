@@ -2,6 +2,7 @@ package model;
 
 //TODO add incapsulation
 public class Employee {
+    //TODO: incaps
     public int yearOfBirth;
     public long salary;
     public String firstName;

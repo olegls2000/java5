@@ -3,6 +3,7 @@ package model;
 import utils.BtaUtils;
 
 public class Circle {
+    //TODO: incaps
     int radius;
     public Circle(){
         System.out.println("Random radius ..");
