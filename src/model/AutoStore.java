@@ -1,9 +1,10 @@
 package model;
+import model.Car;
 
 public class AutoStore {
     private static final double INTEREST = 1.2;
 
-    private long balance;
+    private static long balance = 500000;
     public Car[] parking = new Car[5];
 
     public AutoStore(long balance) {
@@ -41,18 +42,28 @@ public class AutoStore {
 
     }
 
-    public void buyAuto(Car auto) {
+    public int buyAuto(Car auto) {
         // TODO
         // check free place, balance, auto not null
-        if (parking == null) {
-
+        int counter = 0;
+        for (int i = 0; i < parking.length; i++) {
+            if (parking[i] == null) {
+                counter++;
+                counter = parking.length; ;
+            }
+            System.out.println("Number of free places is : " + counter);
         }
+        return counter;
+
     }
 
-    public void report(){
-        System.out.println("Balance: " + balance);
+    public void report() {
         //TODO add parking state
         // add toString to Car class
-    }
 
+
+        System.out.println(" Balance :" + balance + " EURO");
+        System.out.println("Number of cars for sale : " + (parking.length));
+        System.out.println(" Number of free places on parking is : " + parking.length);
+    }
 }
