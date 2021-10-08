@@ -5,6 +5,8 @@ import java.util.Map;
 public class Car {
 	private static final int MIN_PRICE = 80_000;
 	private static final int MAX_PRICE = 400_000;
+	private static final int MIN_WEIGHT = 1200;
+	private static final int MAX_WEIGHT = 2500;
 
     private int price;
     private int weight;
@@ -30,8 +32,18 @@ public class Car {
 	public int getPrice() {
 		return price;
 	}
-	/*public void setWeight(int weight) {
+	public void setWeight(int weight) {
 		weightCheck(weight);
 		this.weight = weight;
-	}*/
+	}
+	public int getWeight() {
+		return weight;
+	}
+
+	private void weightCheck(int weight) {
+		if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
+			System.out.println("Must be in range [" + MIN_WEIGHT + "," + MAX_WEIGHT + "]");
+			throw new RuntimeException();
+		}
+	}
 }

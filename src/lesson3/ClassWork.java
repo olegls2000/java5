@@ -3,7 +3,7 @@ package lesson3;
 import utils.BtaUtils;
 
 public class ClassWork {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         char zz = 'z';
         charPrintSwitchCase('d');
         charPrintSwitchCase('y');
@@ -24,45 +24,59 @@ public class ClassWork {
         //FOR i LOOP
 
         printFromZeroFori(99);
+
         System.out.println();
         System.out.println();
-        //Создате метод
-
-
+        //Создайте метод, выводящий на экран
+        // первые n элементов последовательности
+        // 1 3 5 7 9 11 13 15 17 …. Цикл FOR
         printOddNumbers(6);
+
+        //Создайте метод, выводящий на экран все
+        // неотрицательные элементы последовательности
+        // 90 85 80 75 70 65 60 …. WHILE
         printFrom90Till0();
 
-        int[] array =  new int[5];
+        int[] array = new int[5];
+        int[] array1 = new int[6];
         int arrayLength = array.length;
+        int arrayLength1 = array1.length;
         System.out.println("array length = " + arrayLength);
-
         array[0] = 6;
         array[1] = 9;
         array[2] = 18;
         System.out.println(array);
-        for (int i = 0; i> array.length; i++) {
-            System.out.print(array[i] + ",");
-
-        }
         BtaUtils.printArray(array);
+        BtaUtils.printArray(array);
+        BtaUtils.printArray(array);
+
+        int a = 1;
+        for (int i = 0; i >= 0; i++) {
+            if (a == 5) {
+                continue;
+            }
+            a = a + 2;
+        }
     }
 
     public static void printFrom90Till0() {
         System.out.println();
+
         int n = 90;
-        while (n >=0) {
-            System.out.print(n + ",");
+        while (n >= 0) {
+            System.out.print(n + ", ");
             n -= 5;
         }
     }
 
     public static void printOddNumbers(int count) {
-        int k =1;
-        for ( int i = 0; i < count; i++ ) {
-            System.out.println(k + ",");
+        int k = 1;
+        for (int i = 0; i < count; i++) {
+            System.out.print(k + ", ");
             k += 2;
         }
     }
+
     //44->0,1,2,...XX;
     public static void printFromZero(int to) {
         int i = 0;
@@ -104,4 +118,3 @@ public class ClassWork {
         System.out.println("Print smth...");
     }
 }
-

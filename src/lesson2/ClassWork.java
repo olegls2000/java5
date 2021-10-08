@@ -68,6 +68,10 @@ public class ClassWork {
 
         System.out.println("Random: " + (int) (Math.random() * 2));
         System.out.println("Random: " + BtaUtils.getRandom(900, 960));
+        System.out.println("Random: " + BtaUtils.getRandom(900, 960));
+        System.out.println("Random: " + BtaUtils.getRandom(900, 960));
+        System.out.println("Random: " + BtaUtils.getRandom(900, 960));
+        System.out.println("Random: " + BtaUtils.getRandom(900, 960));
     }
 
 

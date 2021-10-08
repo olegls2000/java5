@@ -1,6 +1,8 @@
-package model;
+package model.specific;
 
-public class Director extends  AbstractWorker{
+import model.AbstractWorker;
+
+public class Director extends AbstractWorker {
 
 	private  String department;
 
