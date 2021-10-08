@@ -1,5 +1,6 @@
 package model;
 import model.Car;
+import java.util.Scanner;
 
 public class AutoStore {
     private static final double INTEREST = 1.2;
@@ -7,8 +8,12 @@ public class AutoStore {
     private static long balance = 500000;
     public Car[] parking = new Car[5];
 
-    public AutoStore(long balance) {
+    public AutoStore() {
+        final var scanner = new Scanner(System.in);
+        System.out.println("Please input initial balance for Auto Store...");
         this.balance = balance;
+        System.out.println("Please input initial parking slots amount for Auto Store...");
+        parking = new Car[scanner.nextInt()];
 
     }
 
@@ -42,19 +47,31 @@ public class AutoStore {
 
     }
 
-    public int buyAuto(Car auto) {
+    public void buyAuto(Car auto) {
         // TODO
         // check free place, balance, auto not null
-        int counter = 0;
+        if (balance < auto.getPrice()) {
+            System.out.println("Impossible to buy a Car. Not sufficient balance (" + balance + "). Required: " + auto.getPrice() + "EUR");
+            return;
+        }
+
+        int freeParkingPlace = getFreeParkingPlace();
+        if (freeParkingPlace < 0) {
+            System.out.println("Impossible to buy a Car. No free parking places");
+        }
+        parking[freeParkingPlace] = auto;
+        balance -= auto.getPrice();
+    }
+
+    private int getFreeParkingPlace() {
+        int freeParkingPlace = -1;
         for (int i = 0; i < parking.length; i++) {
             if (parking[i] == null) {
-                counter++;
-                counter = parking.length; ;
+                freeParkingPlace = 1;
+                break;
             }
-            System.out.println("Number of free places is : " + counter);
         }
-        return counter;
-
+        return freeParkingPlace;
     }
 
     public void report() {
