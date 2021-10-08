@@ -2,6 +2,7 @@ package model;
 
 //TODO add incaps
 public class Human {
+	
 	private String firstName;
 	private String lastName;
 	private Gender gender;
@@ -49,5 +50,8 @@ public class Human {
 				", Last Name: " + this.lastName +
 				", gender: " + this.gender +
 				"]";
+	}
+
+	public void setFirstName() {
 	}
 }

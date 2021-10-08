@@ -19,7 +19,7 @@ public class ClassWork {
         System.out.println("..");
 
         System.out.println(BtaUtils.MY_LUCKY_NUMBER);
-        BtaUtils.JOE.firstName = "NewName";
+        BtaUtils.JOE.setFirstName();
         doSmth(BtaUtils.JOE);
 
         System.out.println(BtaUtils.JOE);

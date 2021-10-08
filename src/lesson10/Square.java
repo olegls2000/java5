@@ -1,0 +1,29 @@
+package lesson10;
+
+import lesson10.interfaces.WithPerimeter;
+import utils.BtaUtils;
+
+public class Square implements WithPerimeter {
+
+	private int side;
+
+	public Square(int side) {
+		this.side = BtaUtils.getRandom(3, 6);
+	}
+
+	public Square() {
+		return;
+	}
+
+	@Override
+	public int getPerimeter() {
+		return 4 * side;
+	}
+
+	@Override
+	public String toString() {
+		return "Square{" +
+				"side=" + side +
+				'}'+ "perimeter = " + getPerimeter();
+	}
+}
