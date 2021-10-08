@@ -39,7 +39,7 @@ public class ClassWork {
         System.out.println("Max perim shape: " + maxPerimeterShape);
 
         WithArea[] shapesArea = new WithArea[22];
-        //TODO find mar Area element ....
+        //TODO find max Area element ....
 
     }
 }
