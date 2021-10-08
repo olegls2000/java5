@@ -42,7 +42,8 @@ public class Car {
 
 	private void weightCheck(int weight) {
 		if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
-			System.out.println("Must be in range [" + MIN_WEIGHT + "," + MAX_WEIGHT + "]");
+			System.out.println("Car weight (" + weight + "Kg) is invalid !" +
+					"Weight must be in range [" + MIN_WEIGHT + " - " + MAX_WEIGHT + "]");
 			throw new RuntimeException();
 		}
 	}

@@ -1,13 +1,15 @@
 package utils;
 
+import model.Gender;
+import model.Human;
 import model.Point;
 
 public class BtaUtils {
 
 
 	public static final int MY_LUCKY_NUMBER = 7;
-	public static final int JOE = ;
-	//public static final Human JOE = new Human("Joe", "B", Gender.MAN);
+	//public static final int JOE = ;
+	public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
 	public static void printArray(int[] arrayToPrint) {
 		System.out.println();
