@@ -3,7 +3,6 @@ import model.Human;
 import model.Gender;
 import model.Point;
 
-
 public class BtaUtils {
 
     // КОНСТАНТЫ
@@ -107,8 +106,8 @@ public class BtaUtils {
 
 
     public static double calculateDistance(Point a, Point b) {
-        double deltaXSqr = Math.pow(2, b.x - a.x); // возводим в квадрат
-        double deltaYSqr = Math.pow(2, b.y - a.y); // возводим в квадрат
+        double deltaXSqr = Math.pow(2, b.getX() - a.getX()); // возводим в квадрат
+        double deltaYSqr = Math.pow(2, b.getY() - a.getY()); // возводим в квадрат
 
         return Math.sqrt(deltaXSqr + deltaYSqr); // берём корень из суммы
 
