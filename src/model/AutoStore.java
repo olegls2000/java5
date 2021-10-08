@@ -4,7 +4,7 @@ public class AutoStore {
     private static final double INTEREST = 1.2;
 
     private long balance;
-    private Car[] parking = new Car[5];
+    public Car[] parking = new Car[5];
 
     public AutoStore(long balance) {
         this.balance = balance;
@@ -44,6 +44,9 @@ public class AutoStore {
     public void buyAuto(Car auto) {
         // TODO
         // check free place, balance, auto not null
+        if (parking == null) {
+
+        }
     }
 
     public void report(){
