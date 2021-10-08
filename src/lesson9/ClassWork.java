@@ -11,7 +11,7 @@ public class ClassWork {
         Car bmw = new Car(3000, 1500);
         Car toyota = new Car(5000, 1500);
         Car honda = new Car(6000, 1500);
-        AutoStore autoStore = new AutoStore(5_000);
+        final var autoStore = new AutoStore();
         autoStore.addCar(bmw, 0);
         autoStore.addCar(toyota, 1);
         autoStore.addCar(honda, 2);
@@ -48,9 +48,9 @@ public class ClassWork {
         String fullName = classReference.getName();
 
         System.out.println("Worker with max salary is: " + maxSalaryWorker);
-        System.out.println("Worker Type: "+ classReference.getSimpleName());
+        System.out.println("Worker Type: " + classReference.getSimpleName());
 
-        if(maxSalaryWorker instanceof Director) {
+        if (maxSalaryWorker instanceof Director) {
             System.out.println("Our rich guy is Director");
             Director rich = (Director) maxSalaryWorker;
             rich.getDepartment();
