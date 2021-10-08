@@ -34,8 +34,7 @@ public class Point {
     public void setZ(int z) {
         this.z = z;
     }
-
-    // автогенерация кода ПКМ - generate - toString
+    // автогенерация кода ПКМ - generate - toString, делает строку читабельной для человека. Для 6го урока.
    @Override
     public String toString() {
         return "Point{" +
