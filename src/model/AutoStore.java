@@ -17,12 +17,6 @@ public class AutoStore {
 
     }
 
-    @Deprecated
-    public void addCar(Car car, int place) {
-        parking[place] = car;
-
-    }
-
     public Car sellAuto(int parkingPlace) {
         int minValue = 0;
         int maxValue = parking.length - 1;

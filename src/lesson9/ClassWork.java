@@ -12,9 +12,9 @@ public class ClassWork {
         Car toyota = new Car(5000, 1500);
         Car honda = new Car(6000, 1500);
         final var autoStore = new AutoStore();
-        autoStore.addCar(bmw, 0);
-        autoStore.addCar(toyota, 1);
-        autoStore.addCar(honda, 2);
+        autoStore.buyAuto(bmw);
+        autoStore.buyAuto(toyota);
+        autoStore.buyAuto(honda);
 
         autoStore.sellAuto(0);
         autoStore.sellAuto(4);
