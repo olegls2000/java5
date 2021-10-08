@@ -5,7 +5,7 @@ import utils.CarColor;
 public class HomeWork {
 
     public static void main(String[] args) {
-        //TODO: rename
+
 
         Car bentleyContinental = new Car(350000, 2450);
         Car ladaBaklazhan = new Car(3200, 1567);
