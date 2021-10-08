@@ -1,6 +1,6 @@
 package model;
 import utils.BtaUtils;
-//TODO apply INCAPSULATION
+//TODO apply INCAPSULATION - ok
 public class Triangle {
     private Point a;
     private Point b;

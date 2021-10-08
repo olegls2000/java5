@@ -1,6 +1,6 @@
 package model;
 
-public class AbstractWorker {
+public abstract class AbstractWorker {
     private int salary;
     private String firstName;
 
@@ -10,6 +10,7 @@ public class AbstractWorker {
     }
 
     public AbstractWorker() {
+        System.out.println("Abstract constr");
     }
 
     public int getSalary() {
