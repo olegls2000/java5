@@ -21,9 +21,16 @@ public class Car {
         }
     }
 
+    private void weightCheck(int weight){
+
+    }
+
     public void setPrice(int price){
         priceCheck(price);
         this.price = price;
+    }
+    public int getPrice(){
+        return price;
     }
 
 }
