@@ -1,5 +1,4 @@
 package model;
-
 import utils.BtaUtils;
 
 public class Circle {
@@ -15,4 +14,5 @@ public class Circle {
     public double getLength() {
         return Math.PI * this.radius;
     }
+
 }

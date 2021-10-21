@@ -1,42 +1,76 @@
 package model;
 
-//TODO apply incapsulation
-
 public class Employee {
-    public int yearOfBirth; //
-    public long salary;
-    public String firstName;
-   public String lastName;
+    private int yearOfBirth;
+    private long salary;
+    private String firstName;
+    private String lastName;
 
     public Employee() {
         System.out.println("Default Constructor");
     }
 
-
-    public Employee(int yearOfBirth, long salary, String firstName) {
-        this(yearOfBirth, salary, firstName, null); // что бы небыло у joe null во вкладке lesson5/ClassWork
+    public Employee(int yearOfBirth) {
+        this(yearOfBirth, 0l,
+                null,
+                null);
     }
 
+    public Employee(int yearOfBirth,
+                    long salary,
+                    String firstName) {
+        this(yearOfBirth, salary, firstName,
+                null);
+    }
 
-    public Employee(int yearOfBirth, long salary, String firstName, String lastName) {
+    public Employee(int yearOfBirth, long salary,
+                    String firstName, String lastName) {
         System.out.println("All properties Constructor");
         this.yearOfBirth = yearOfBirth;
+        this.salary = salary;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.salary = salary;
     }
-
-
-    //public Employee(String firstName) {
-      //  System.out.println("Custom Constructor");
-        // this.firstName = firstName;
 
 
     public void printInfo() {
-        System.out.println("My name is " + this.firstName + " " + this.lastName);
+        System.out.println("My name is: " + this.firstName);
     }
-// overload!!!!!
-    // void printInfo(int time) { //метод может так же называться,только если разные параметры
-       // System.out.println("My name is " + this.firstName + " " + this.lastName);
-    //}
+
+    //overload!!!!
+    public void printInfo(int time) {
+        System.out.println("My name is: " + this.firstName);
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }

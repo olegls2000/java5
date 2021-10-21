@@ -5,17 +5,17 @@ import model.Employee;
 public class ClassWork {
     public static void main(String[] args) {
         Employee vasja = new Employee(); // new + конструктор = инициализация
-        vasja.firstName = "Vasilij";
-        vasja.lastName = "Vasiljev";
-        vasja.salary = 5000;
-        vasja.yearOfBirth = 1980;
+        vasja.setLastName("Vasilij");
+        vasja.setLastName("Vasiljev");
+        vasja.setSalary(5000);
+        vasja.setYearOfBirth(1980);
 
 
         Employee petja = new Employee();
-        petja.firstName = "Petja";
-        petja.lastName = "Petrov";
-        petja.salary = 5000;
-        petja.yearOfBirth = 1980;
+        petja.setFirstName("Petja");
+        petja.setLastName("Petrov");
+        petja.setSalary(5000);
+        petja.setYearOfBirth(1980);
         // vasja = petja; // ссылка на один объект - не обязательно
 
         vasja.printInfo();
@@ -28,26 +28,26 @@ public class ClassWork {
         Employee[] years = {joe, vladimir};
         Employee minYear = years[0];
         for (Employee emp : years) {
-            System.out.println("Name " + emp.firstName);
-            System.out.println("Salary " + emp.yearOfBirth);
-            if (emp.yearOfBirth > minYear.yearOfBirth) {
+            System.out.println("Name " + emp.getFirstName());
+            System.out.println("Salary " + emp.getYearOfBirth());
+            if (emp.getYearOfBirth() > minYear.getYearOfBirth()) {
                 minYear = emp;
             }
         }
-        System.out.println("Самый молодой " + minYear.firstName + " " + minYear.lastName + " " + minYear.yearOfBirth);
+        System.out.println("Самый молодой " + minYear.getFirstName() + " " + minYear.getLastName() + " " + minYear.getYearOfBirth());
 
 // у кого самая большая зарплата
 
         Employee[] employees = {joe, vladimir}; // у кого самая большая зарплата
         Employee maxSalaryEmployee = employees[0];
         for (Employee emp : employees) {
-            System.out.println("Name " + emp.firstName);
-            System.out.println("Salary " + emp.salary);
-            if (emp.salary > maxSalaryEmployee.salary) {
+            System.out.println("Name " + emp.getFirstName());
+            System.out.println("Salary " + emp.getSalary());
+            if (emp.getSalary() > maxSalaryEmployee.getSalary()) {
                 maxSalaryEmployee = emp;
             }
         }
-        System.out.println("Biggest Salary has " + maxSalaryEmployee.firstName);
+        System.out.println("Biggest Salary has " + maxSalaryEmployee.getFirstName());
 
 // создаём круги из вкладки Circle
 
@@ -57,6 +57,7 @@ public class ClassWork {
             circles[i] = new Circle();
         }
         System.out.println(circles);
+
 
         // Найти круг, с самой большой длинной окружности
 

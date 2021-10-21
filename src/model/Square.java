@@ -2,10 +2,10 @@ package model;
 import utils.BtaUtils;
 //TODO apply INCAPSULATION
 public class Square {
-    Point a;
-    Point b;
-    Point c;
-    Point d;
+    private Point a;
+    private Point b;
+    private Point c;
+    private Point d;
 
     public Square(Point a, Point b, Point c, Point d) {
         this.a = a;

@@ -39,6 +39,5 @@ public class ClassWork {
 
         WithArea[] shapesArea = new WithArea[22];
         //// HomeWork!!!!!!!
-
     }
 }
