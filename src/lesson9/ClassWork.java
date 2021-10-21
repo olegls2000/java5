@@ -2,7 +2,7 @@ package lesson9;
 
 import model.AutoStore;
 import model.Car;
-import model.Director;
+import model.specific.Director;
 import model.Slave;
 public class ClassWork {
     public static void main(String[] args) {
