@@ -1,6 +1,8 @@
 package model;
 
-public class Car {
+import lesson10.interfaces.WithPerimeter;
+
+public class Car implements WithPerimeter {
     private static final int MIN_PRICE = 3_000;
     private static final int MAX_PRICE = 100_000;
 
@@ -25,7 +27,14 @@ public class Car {
         priceCheck(price);
         this.price = price;
     }
+
     public int getPrice() {
         return price;
+    }
+
+
+    @Override
+    public int getPerimeter() {
+        return 0;
     }
 }

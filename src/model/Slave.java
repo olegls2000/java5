@@ -9,4 +9,8 @@ public class Slave extends AbstractWorker {
         System.out.println("Slave constr");
     }
 
+    @Override
+    public String toString() {
+        return "Slave{} " + super.toString();
+    }
 }
