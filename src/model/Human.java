@@ -1,10 +1,9 @@
 package model;
 //TODO add incapsulation ???????
 public class Human {
-    private String firstName;
-    private String lastName;
-    private Gender gender; // поле enum в gender
-
+    public String firstName;
+    public String lastName;
+    public Gender gender; // поле enum в gender
 
     public Human(String firstName, String lastName, Gender gender){
         this.firstName = firstName;
