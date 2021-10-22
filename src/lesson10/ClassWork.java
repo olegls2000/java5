@@ -53,7 +53,7 @@ public class ClassWork {
             }
         }
         WithArea maxAreaShape = shapesArea[0];
-        for (WithArea shape: shapes) {
+        for (WithArea shape: shapesArea) {
             if(shape.getArea() > maxAreaShape.getArea()) {
                 maxAreaShape = shape;
             }

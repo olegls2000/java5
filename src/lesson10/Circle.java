@@ -29,10 +29,4 @@ public class Circle implements WithPerimeter, WithArea {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                '}' + "area = " + getArea();
-    }
 }
