@@ -5,6 +5,7 @@ public class Human {
     private String lastName;
     private Gender gender; // поле enum в gender
 
+
     public Human(String firstName, String lastName, Gender gender){
         this.firstName = firstName;
         this.lastName = lastName;
