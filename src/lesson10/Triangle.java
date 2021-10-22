@@ -26,6 +26,6 @@ public class Triangle implements WithPerimeter, WithArea {
 
     @Override
     public double getArea() {
-        return 0;
+        return (side * side) / 2;
     }
 }

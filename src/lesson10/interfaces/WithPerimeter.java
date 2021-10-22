@@ -10,4 +10,6 @@ public interface WithPerimeter {
     default void printSmth() {
         System.out.println("Hello from default");
     }
+
+    double getArea();
 }

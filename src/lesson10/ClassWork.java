@@ -39,6 +39,27 @@ public class ClassWork {
 
         WithArea[] shapesArea = new WithArea[22];
         //TODO find max Area element...
+        for (int i = 0; i < shapes.length; i++) {
+            int random = BtaUtils.getRandom(0, 3);
+            switch (random) {
+                case 1:
+                    shapes[i] = new Circle();
+                    break;
+                case 2:
+                    shapes[i] = new Triangle();
+                    break;
+                default:
+                    shapes[i] = new Square();
+            }
+        }
+        WithArea maxAreaShape = shapesArea[0];
+        for (WithArea shape: shapes) {
+            if(shape.getArea() > maxAreaShape.getArea()) {
+                maxAreaShape = shape;
+            }
+        }
+
+        System.out.println("Max area shape: " + maxAreaShape);
 
     }
 }
