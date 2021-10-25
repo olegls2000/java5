@@ -6,6 +6,6 @@ public class Car extends AbstractVehicle {
     public Car(int seats) {
         super();
         //TODO add random value
-        this.seats = 4;
+        this.seats = getSeats();
     }
 }

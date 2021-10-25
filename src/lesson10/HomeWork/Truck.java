@@ -6,6 +6,6 @@ public class Truck extends AbstractVehicle {
     public Truck(int payload) {
         super();
 
-        this.payload = payload;
+        this.payload = getPayload();
     }
 }
