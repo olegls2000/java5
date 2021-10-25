@@ -6,8 +6,8 @@ public class HomeWork {
 
     public static void main(String[] args) {
 
-       int number;
-        System.out.println("Enter the number: ");
+         int number;
+         System.out.println("Enter the number: ");
 
         Scanner scanner = new Scanner(System.in);
         number = scanner.nextInt();
@@ -19,5 +19,7 @@ public class HomeWork {
              i++;
          }
         System.out.println("Factorial of number " + number + " is " + factorial);
+
+        }
     }
-}
+
