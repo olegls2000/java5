@@ -9,7 +9,6 @@ public class ClassWork {
 
         final var autoStore = new AutoStore();
 
-
         Car bmw = new Car(100,1000);
         Car toyota = new Car(200, 2500);
         Car honda = new Car(1600, 1200);

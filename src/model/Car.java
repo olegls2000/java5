@@ -4,6 +4,7 @@ public class Car {
     private int price;
     private int weight;
 
+
     private static final int MIN_PRICE = 80_000;
     private static final int MAX_PRICE = 400_000;
 

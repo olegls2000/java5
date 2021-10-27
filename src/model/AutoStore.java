@@ -49,7 +49,7 @@ public class AutoStore {
         //TODO add parking state
     }
 
-    public void buyAuto (Car auto){
+    public void buyAuto (Car auto)  {
         if(balance < auto.getPrice()){
             System.out.println("No sufficient balance (" + balance+ "). Required: " + auto.getPrice());
         }
