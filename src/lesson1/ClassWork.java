@@ -1,10 +1,11 @@
 package lesson1;
+
 //TODO rename
 //TODO add home work
 public class ClassWork {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //System.out.println("Hello W..");
         //System.out.print("Hello W..");
         //System.out.print("Hello W..");
@@ -37,10 +38,10 @@ public class ClassWork {
         int t = 50 % 7;
 
         int resultat = 0;
-        resultat = 121 * 1 % 3 + 388^3;
+        resultat = 121 * 1 % 3 + 388 ^ 3;
         System.out.println("resultat = " + resultat);
 
-        int dd = 121 * 1/3 + 388 * 388 * 388;
+        int dd = 121 * 1 / 3 + 388 * 388 * 388;
         System.out.println("121 * 1/3 + 388^3 = " + dd);
 
 
@@ -62,12 +63,12 @@ public class ClassWork {
         boolean b6 = 4 != 5;
         System.out.println("4 != 5 = " + b6);
 
-        double result2 = 121 * (1/3) + Math.pow(388, 3) + 121 * 2;
+        double result2 = 121 * (1 / 3) + Math.pow(388, 3) + 121 * 2;
         System.out.println("121* (1/3)" + " + Math.pow(388, 3) + 121 * 2 = " + result2);
 
 
         int rate = 121;
-        double result3 = rate * (1/3) + Math.pow(388, 3) + rate * 2;
+        double result3 = rate * (1 / 3) + Math.pow(388, 3) + rate * 2;
         System.out.println(rate + " * (1/3)" + " + Math.pow(388, 3) + " + rate + " * 2 = " + result3);
 
         int y = 5;
@@ -81,7 +82,6 @@ public class ClassWork {
         //int x = ++z; //10
         System.out.println("x = " + x); //9
         System.out.println("x = " + z); //10
-
 
 
         double decrem = 5.88; // декрементация
@@ -98,7 +98,7 @@ public class ClassWork {
 
         long div = 50; // если тип double то будет  8.3
         div /= 2; //25
-        div /=3; //8
+        div /= 3; //8
         System.out.println("div = " + div);
 
     }

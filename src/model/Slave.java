@@ -6,7 +6,7 @@ public class Slave extends AbstractWorker {
     }
 
     public Slave() {
-        System.out.println("Slave constr");
+        System.out.println("Slave constructor");
     }
 
     @Override

@@ -1,4 +1,5 @@
 package model;
+
 import java.util.Scanner; //!!!!!!///
 
 public class AutoStore {
@@ -46,7 +47,7 @@ public class AutoStore {
             return;
         }
         int freeParkingPlace = getFreeParkingPlace();
-        if(freeParkingPlace < 0) {
+        if (freeParkingPlace < 0) {
             System.out.println("Impossible to buy a Car. No free parking places.");
             return;
         }
@@ -57,7 +58,7 @@ public class AutoStore {
     private int getFreeParkingPlace() {
         int freeParkingPlace = -1;
         for (int i = 0; i < parking.length; i++) {
-            if(parking[i] == null) {
+            if (parking[i] == null) {
                 freeParkingPlace = i;
                 break;
             }
@@ -65,7 +66,7 @@ public class AutoStore {
         return freeParkingPlace;
     }
 
-    public void report(){
+    public void report() {
         System.out.println("Balance: " + balance);
         //TODO add parking state
         // add toString to Car class

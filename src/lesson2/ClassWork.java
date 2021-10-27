@@ -1,5 +1,7 @@
 package lesson2;
+
 import utils.BtaUtils;
+
 //TODO rename
 public class ClassWork {
     public static void main(String[] args) {
@@ -59,7 +61,8 @@ public class ClassWork {
         boolean b10 = m1 > m2;
         //System.out.println(m1 > m2) (+ b10);
     }
-    public static void checkTriangle(int sideA, int sideB, int sideC){
+
+    public static void checkTriangle(int sideA, int sideB, int sideC) {
         boolean cond1 = sideA + sideB > sideC;
         boolean cond2 = sideB + sideC > sideA;
         boolean cond3 = sideA + sideC > sideB;
@@ -70,8 +73,6 @@ public class ClassWork {
         }
 
     }
-
-
 
 
     public static void printReport(int sales, int profit) {
@@ -85,7 +86,6 @@ public class ClassWork {
         System.out.println("log: sum = " + sum);
         return sum;
     }
-
 
 
 }

@@ -1,5 +1,7 @@
 package lesson4;
+
 import utils.BtaUtils;
+
 //TODO rename
 public class ClassWork {
     public static void main(String[] args) {
@@ -24,12 +26,12 @@ public class ClassWork {
         //int temp = arrayGenerated[maxIndex];
         //arrayGenerated[maxIndex] = arrayGenerated[minIndex];
         //arrayGenerated[minIndex] = temp;
-      //  System.out.println("after min-max swap: ");
+        //  System.out.println("after min-max swap: ");
         arrayGenerated = BtaUtils.swapElements(maxIndex, minIndex, arrayGenerated);
         BtaUtils.printArray(arrayGenerated);
-int [] test = {1,2,3,4};
-test = BtaUtils.swapElements(0, 3, test);
-BtaUtils.printArray(test);
+        int[] test = {1, 2, 3, 4};
+        test = BtaUtils.swapElements(0, 3, test);
+        BtaUtils.printArray(test);
 
 
         int[][] array2d = new int[2][2];
@@ -44,9 +46,6 @@ BtaUtils.printArray(test);
                 System.out.println(array2d[i][j]);
             }
         }
-
-
-
 
 
     }

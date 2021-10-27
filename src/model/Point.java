@@ -1,4 +1,5 @@
 package model;
+
 //TODO apply INCAPSULATION
 public class Point {
 
@@ -34,8 +35,9 @@ public class Point {
     public void setZ(int z) {
         this.z = z;
     }
+
     // автогенерация кода ПКМ - generate - toString, делает строку читабельной для человека. Для 6го урока.
-   @Override
+    @Override
     public String toString() {
         return "Point{" +
                 "x=" + x +

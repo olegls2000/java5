@@ -1,4 +1,5 @@
 package lesson4;
+
 //TODO rename
 public class HomeWork {
     public static void main(String[] args) {
@@ -25,12 +26,11 @@ public class HomeWork {
         System.out.println("Max value " + array[iMax][jMax]);
 
 
-
         // находим минимум в двумерном массиве
 
 
         int[][] minarray = {{3, 4}, {6, 0}, {-6, 10, 6}};
-        int minimal  = minarray[0][0]; //условие для определения мин. макс. в каждой скобке * дополнено
+        int minimal = minarray[0][0]; //условие для определения мин. макс. в каждой скобке * дополнено
         int iMin = 0; //// дополнено
         int jMin = 0; //// дополнено
         for (int i = 0; i < minarray.length; i++) { //fori + tab
@@ -48,11 +48,6 @@ public class HomeWork {
 
         }
         System.out.println("Min value " + array[iMin][jMin]);
-
-
-
-
-
 
 
         int[][] minmaxarray = {{3, 4}, {6, 0}, {-6, 10, 6}};

@@ -1,4 +1,5 @@
 package lesson10.homework;
+
 import utils.BtaUtils;
 
 import java.time.*;
@@ -18,7 +19,7 @@ public abstract class AbstractVehicle {
         //TODO add random values!!! (date)
         this.releaseDate = LocalDate.of(2009, 3, 20);
         this.techState = BtaUtils.getRandom(MIN_TECH_STATE, MAX_TECH_STATE);
-        this.manufacturer = Manufacturer.values()[Manufacturer.values().length-1];
+        this.manufacturer = Manufacturer.values()[Manufacturer.values().length - 1];
     }
 
     //TODO getters and setters

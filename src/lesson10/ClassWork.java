@@ -15,22 +15,22 @@ public class ClassWork {
 
 
         WithPerimeter[] shapes = new WithPerimeter[9];
-        for (int i = 0; i < shapes.length ; i++) {
-        int random = BtaUtils.getRandom(0, 3);
-        switch (random) {
-            case 1: //случай
-                shapes[i] = new Circle();
-                break;
-            case 2: // случай
-                shapes[i] = new Triangle();
-                break;
-            default:
-                shapes[i] = new Square();
-        }
+        for (int i = 0; i < shapes.length; i++) {
+            int random = BtaUtils.getRandom(0, 3);
+            switch (random) {
+                case 1: //случай
+                    shapes[i] = new Circle();
+                    break;
+                case 2: // случай
+                    shapes[i] = new Triangle();
+                    break;
+                default:
+                    shapes[i] = new Square();
+            }
         }
         WithPerimeter maxPerimeterShape = shapes[0];
         for (WithPerimeter shape : shapes) {
-            if(shape.getPerimeter() > maxPerimeterShape.getPerimeter()) {
+            if (shape.getPerimeter() > maxPerimeterShape.getPerimeter()) {
                 maxPerimeterShape = shape;
             }
         }

@@ -10,9 +10,9 @@ public class Director extends AbstractWorker {
         this.department = department;
     }
 
-public Director() {
+    public Director() {
         System.out.println("Director constr");
-}
+    }
 
     public String getDepartment() {
         return department;

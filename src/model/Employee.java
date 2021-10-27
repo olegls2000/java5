@@ -37,7 +37,7 @@ public class Employee {
         System.out.println("My name is: " + this.firstName);
     }
 
-    //overload!!!!
+    // overload!!!!
     public void printInfo(int time) {
         System.out.println("My name is: " + this.firstName);
     }

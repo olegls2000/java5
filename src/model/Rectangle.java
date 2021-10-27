@@ -1,4 +1,5 @@
 package model;
+
 import utils.BtaUtils;
 
 public class Rectangle {

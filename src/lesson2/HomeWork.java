@@ -1,4 +1,5 @@
 package lesson2;
+
 //TODO rename
 public class HomeWork {
     public static void main(String[] args) {
@@ -15,12 +16,9 @@ public class HomeWork {
         System.out.print("Случайное число : " + x);
 
 
-
-
-
     }
 
-// числа ближайшие к 100
+    // числа ближайшие к 100
     public static void closestTo100(int m, int n) {
         int mDelta = Math.abs(100 - m);
         int nDelta = Math.abs(100 - n);
@@ -37,18 +35,14 @@ public class HomeWork {
 
 // если остаток при делении 0, тогда это чётное число, если остаток отличный от 0, тогда это нечётное число
 
-// чётное или не чётное
+    // чётное или не чётное
     public static void countNumbers(int aacount) {
         aacount = 19;
         if (aacount % 2 == 0)
             System.out.println("Число четное");
-     else
+        else
             System.out.println("Число нечетное");
     }
-
-
-
-
 
 
 }

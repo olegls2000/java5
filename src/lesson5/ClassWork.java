@@ -1,6 +1,8 @@
 package lesson5;
+
 import model.Circle;
 import model.Employee;
+
 //TODO rename
 public class ClassWork {
     public static void main(String[] args) {
@@ -62,8 +64,8 @@ public class ClassWork {
         // Найти круг, с самой большой длинной окружности
 
         double maxLength = 0d;
-        for (Circle cr: circles) {
-            if(cr.getLength() > maxLength) {
+        for (Circle cr : circles) {
+            if (cr.getLength() > maxLength) {
                 maxLength = cr.getLength();
             }
         }

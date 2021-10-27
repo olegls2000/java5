@@ -1,5 +1,7 @@
 package model;
+
 import utils.BtaUtils;
+
 //TODO apply INCAPSULATION
 public class Square {
     private Point a;

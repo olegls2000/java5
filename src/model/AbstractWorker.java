@@ -1,4 +1,5 @@
 package model;
+
 public abstract class AbstractWorker {
     private int salary;
     private String firstName;
@@ -7,9 +8,11 @@ public abstract class AbstractWorker {
         this.salary = salary;
         this.firstName = firstName;
     }
+
     public AbstractWorker() {
         System.out.println("Abstract constr");
     }
+
     public int getSalary() {
         return salary;
     }
@@ -21,9 +24,11 @@ public abstract class AbstractWorker {
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     @Override
     public String toString() {
         return "AbstractWorker{" +
