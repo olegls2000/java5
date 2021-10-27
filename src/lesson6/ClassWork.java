@@ -3,7 +3,7 @@ import model.Gender;
 import model.Human;
 import model.Point;
 import utils.BtaUtils;
-//TODO rename
+
 public class ClassWork {
 
     public static void main(String[] args){
@@ -20,7 +20,7 @@ public class ClassWork {
 
     //Константы из начала BtaUtils
     System.out.println(BtaUtils.MY_LUCKY_NUMBER);
-    BtaUtils.JOE.setfirstName = "NewName";
+    BtaUtils.JOE.setFirstName("NewName");
                     // BtaUtils.JOE = ivan; - так нельзя!!!!!!
             doSmth(BtaUtils.JOE);
 
@@ -49,7 +49,7 @@ public class ClassWork {
         i += 2;
     }
     public static void doSmth(Human human) {
-        human.setlastName = "NewLastName";
+        human.setLastName("NewLastName");
     }
 
 
