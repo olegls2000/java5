@@ -14,7 +14,26 @@ public class VehoAutoSalon implements AutoSalonApi {
 
     @Override
     public int buyVehicle(AbstractVehicle vehicle) {
-        return 0;
+        final int carPrice = vehicle.getPrice();
+        if (balance < carPrice) {
+            System.out.println("Not sufficient balance!!!");
+            return -1;
+        }
+        int freeParkingSpot = -1;
+        for (int i = 0; i < parking.length; i++) {
+            if (parking[i] == null) {
+                freeParkingSpot = i;
+                break;
+            }
+        }
+        if (freeParkingSpot == -1) {
+            System.out.println("No free parking places!!!");
+            return -1;
+        }
+        balance -= carPrice;
+        parking[freeParkingSpot] = vehicle;
+
+        return freeParkingSpot;
     }
 
     @Override
