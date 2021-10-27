@@ -20,7 +20,7 @@ public class ClassWork {
 
     //Константы из начала BtaUtils
     System.out.println(BtaUtils.MY_LUCKY_NUMBER);
-    BtaUtils.JOE.firstName = "NewName";
+    BtaUtils.JOE.setfirstName = "NewName";
                     // BtaUtils.JOE = ivan; - так нельзя!!!!!!
             doSmth(BtaUtils.JOE);
 
@@ -49,7 +49,7 @@ public class ClassWork {
         i += 2;
     }
     public static void doSmth(Human human) {
-        human.lastName = "NewLastName";
+        human.setlastName = "NewLastName";
     }
 
 
