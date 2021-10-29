@@ -18,16 +18,19 @@ public abstract class AbstractVehicle {
 	//private ZonedDateTime zonedDateTime = ZonedDateTime.of(releaseDate, localTime, ZoneId.of("UTC"));
 	private int techState;
 	private Manufacturer manufacturer;
-	private int Seats;
-	private int Payload;
+	private int seats;
 
 	public AbstractVehicle() {
 		//TODO add random values
 		this.releaseDate = LocalDate.of(2009, 3, 20);
 		this.techState = BtaUtils.getRandom(MIN_TECH_STATE, MAX_TECH_STATE);
-		this.manufacturer = Manufacturer.values()[Manufacturer.values().length-1];
-		this.Seats = BtaUtils.getRandom(MIN_SEATS, MAX_SEATS);
-		this.Payload = BtaUtils.getRandom(MIN_PAYLOAD, MAX_PAYLOAD);
+
+		Manufacturer[] allManufacturers = Manufacturer.values();
+		int randomIndex = BtaUtils.getRandom(0, allManufacturers.length - 1);
+		this.manufacturer = allManufacturers[randomIndex];
+
+		this.seats = BtaUtils.getRandom(MIN_SEATS, MAX_SEATS);
+
 	}
 
 	//TODO getters and setters
@@ -57,18 +60,12 @@ public abstract class AbstractVehicle {
 	}
 
 	public int getSeats() {
-		return Seats;
+		return seats;
 	}
 
 	public void setSeats(int seats) {
-		Seats = seats;
+		seats = seats;
 	}
 
-	public int getPayload() {
-		return Payload;
 	}
 
-	public void setPayload(int payload) {
-		Payload = payload;
-	}
-}

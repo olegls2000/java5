@@ -14,5 +14,7 @@ public class Circle {
 	public double getLength() {
 		return Math.PI * this.radius;
 	}
+	public double getArea() { return Math.PI * this.radius * this.radius; }
 }
+
 

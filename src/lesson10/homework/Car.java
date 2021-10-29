@@ -1,11 +1,13 @@
 package lesson10.homework;
 
-public class Car {
+import utils.BtaUtils;
+
+public class Car extends AbstractVehicle{
 	private int seats;
 
 	public Car() {
 		super();
 		//TODO add random value
-		this.seats = 4;
+		this.seats = BtaUtils.getRandom(0, 4);
 	}
 }
