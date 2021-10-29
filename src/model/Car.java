@@ -9,33 +9,33 @@ public class Car {
 
     private int price;
     private int weight;
-//TODO Rename
+
+    //TODO Rename
     public enum colour {
         RED, WHITE, BLACK
     }
-// TODO use Enum
-    public Car(int price, int weight, String colour) {
+
+    // TODO use Enum
+    public Car(int price, int weight) {
         priceCheck(price);
         this.price = price;
         weightCheck(weight);
         this.weight = weight;
-        colourCheck(colour);
-        this.colour = colour;
+   /*     colourCheck(colour);
+        this.colour = colour;*/
 
     }
 
-    private void colourCheck(String colour) {
+  /*  private void colourCheck(String colour) {
         switch (colour) {
-            case RED :
+            case RED:
 
-            case WHITE :
+            case WHITE:
 
-            case BLACK :
+            case BLACK:
 
         }
-
-
-    }
+    }   */
 
     private void priceCheck(int price) {
         if (price < MIN_PRICE || price > MAX_PRICE) {
@@ -52,7 +52,6 @@ public class Car {
             throw new RuntimeException();
         }
     }
-
 
 
     public void setPrice(int price) {

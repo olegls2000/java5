@@ -7,15 +7,12 @@ public class Triangle {
     private Point b;
     private Point c;
 
-
-    public Triangle(Point a, Point b, Point c) {
-        pointOneLineCheck(a, b, c);
+    public Triangle(Point one, Point two, Point three) {
+        pointOneLineCheck(one, two, three);
+        this.a = one;
+        this.b = two;
+        this.c = three;
     }
-
-        this.a =a;
-        this.b =b;
-        this.c =c;
-}
 
     public Point getA() {
         return a;
@@ -44,33 +41,18 @@ public class Triangle {
         this.c = c;
     }
 
-
-    private void pointOneLineCheck(Point one, Point two, Point three) {
-        //proverka treugolnika chto tochki ne na odnoi priamoi
-        double leftPart = (three.getY() - one.getY()) / two.getY() - one.getY())
-        double rightPart = (three.getX() - one.getX()) / (two.getX() - one.getX())
-
-        if (leftPart == rightPart) {
-
-            System.out.println("  Triangle impossible ");
-            throw new RuntimeException();
-
-        }
-
-
-        public double calculatePerimetr () {
-
-
-            return 0.0D;
-        }
-
-
-        public double calculatePerim () {
-            return BtaUtils.calculateDistance(a, b);
-
-        }
-
-
+    public double calculatePerimeter() {
+        return BtaUtils.calculateDistance(a, b) +
+                BtaUtils.calculateDistance(b, c) +
+                BtaUtils.calculateDistance(a, c);
     }
 
-
+    private void pointOneLineCheck(Point one, Point two, Point three) {
+        double lefPart = (three.getY() - one.getY()) / (two.getY() - one.getY());
+        double rightPart = (three.getX() - one.getX()) / (two.getX() - one.getX());
+        if (lefPart == rightPart) {
+            System.out.println("Triangle impossible!!");
+            throw new RuntimeException();
+        }
+    }
+}
