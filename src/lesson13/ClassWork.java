@@ -6,7 +6,7 @@ import java.util.*;
 
 public class ClassWork {
     public static void main(String[] args) {
-        String sentence = "Hi Joe. I Am Joe too! Hi joe, them.";
+        String sentence = "Hi Joe.I Am Joe too! Hi joe, them.";
         BtaStringUtils.printDuplicates(sentence);
 
         List<String> myList = new ArrayList();
