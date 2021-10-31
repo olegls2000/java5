@@ -9,6 +9,38 @@ public class Square {
     private Point c;
     private Point d;
 
+    public Point getA() {
+        return a;
+    }
+
+    public void setA(Point a) {
+        this.a = a;
+    }
+
+    public Point getB() {
+        return b;
+    }
+
+    public void setB(Point b) {
+        this.b = b;
+    }
+
+    public Point getC() {
+        return c;
+    }
+
+    public void setC(Point c) {
+        this.c = c;
+    }
+
+    public Point getD() {
+        return d;
+    }
+
+    public void setD(Point d) {
+        this.d = d;
+    }
+
     public Square(Point a, Point b, Point c, Point d) {
         this.a = a;
         this.b = b;
@@ -21,4 +53,5 @@ public class Square {
         double side2 = BtaUtils.calculateDistance(b, c);
         return side1 * side2;
     }
+
 }

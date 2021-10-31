@@ -14,13 +14,28 @@ public class Triangle {
         this.c = c;
     }
 
-    // разграничение дрступов
     public Point getA() {
-        return this.a;
+        return a;
     }
 
     public void setA(Point a) {
         this.a = a;
+    }
+
+    public Point getB() {
+        return b;
+    }
+
+    public void setB(Point b) {
+        this.b = b;
+    }
+
+    public Point getC() {
+        return c;
+    }
+
+    public void setC(Point c) {
+        this.c = c;
     }
 
     Double calculatePerim() {
