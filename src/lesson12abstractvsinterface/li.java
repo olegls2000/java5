@@ -1,11 +1,9 @@
 package lesson12abstractvsinterface;
 
 import java.io.Serializable;
+import java.util.concurrent.Callable;
 
-        import java.io.Serializable;
-        import java.util.concurrent.Callable;
-
-public interface Ii extends
+interface Ii extends
         Serializable,
         Runnable,
         Callable {
