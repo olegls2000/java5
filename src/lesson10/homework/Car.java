@@ -10,4 +10,9 @@ public class Car extends AbstractVehicle{
 		//TODO add random value
 		this.seats = BtaUtils.getRandom(0, 4);
 	}
+
+	@Override
+	public int getPrice() {
+		return 0;
+	}
 }

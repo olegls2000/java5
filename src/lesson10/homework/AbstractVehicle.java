@@ -67,5 +67,6 @@ public abstract class AbstractVehicle {
 		seats = seats;
 	}
 
-	}
+	public abstract int getPrice();
+}
 

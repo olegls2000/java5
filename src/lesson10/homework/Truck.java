@@ -20,5 +20,10 @@ public class Truck extends AbstractVehicle {
 	public void setPayload(int payload) {
 		this.payload = payload;
 	}
+
+	@Override
+	public int getPrice() {
+		return 0;
+	}
 }
 
