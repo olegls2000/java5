@@ -26,7 +26,7 @@ public class HomeWork {
         System.out.println("Вытаскиваем рандомный 8-й элемент: " + element2);
         Collections.shuffle(color);
         Collections.shuffle(coloradd);
-        color.remove("Flash"); // в ж*пу Flash
+        color.remove("Flash"); // в *** Flash
         color.add(0, "Flash"); // ставим Flash первым в индексе
         System.out.println();
         System.out.println("Random:");
