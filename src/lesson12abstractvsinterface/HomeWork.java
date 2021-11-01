@@ -1,5 +1,7 @@
 package lesson12abstractvsinterface;
 
+import utils.BtaStringUtils;
+
 import java.util.Scanner;
 
 public class HomeWork {
@@ -18,5 +20,39 @@ public class HomeWork {
             System.out.println("Longest word: '" + longWord + "'");
             System.out.println("Shortest word: '" + shortWord + "'");
         }
+
+        private static void swapLongestWithShortest(String sentence) {
+            String[] words = BtaStringUtils.splitToWords(sentence);
+            int indexLongest = getIndexOfLongest(words);
+            int indexOfShortest = getIndexOfShortest(words);
+            swapWords(indexLongest, indexLongest, words);
+
+        }
+
+        private static int getIndexOfLongest(String[] words) {
+            return -1;
+        }
+
+        private static int getIndexOfShortest(String[] words) {
+            return -1;
+        }
+
+        private static void swapWords(int firstIndex, int secondIndex, String[] words) {
+            String temp = words[firstIndex];
+            words[firstIndex] = words[secondIndex];
+            words[secondIndex] = temp;
+
+        }
+
+        private static void print(String[] words) {
+
+            for (String word : words) {
+                System.out.println(word + " ");
+
+            }
+        }
     }
 }
+
+
+

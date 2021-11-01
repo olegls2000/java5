@@ -1,13 +1,10 @@
 package lesson13;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class HomeWork {
     public static void main(String[] args) {
-        List<String> colors1 = new ArrayList<String>();
+        List<String> colors1 = new ArrayList<>();
         colors1.add("Red");
         colors1.add("Green");
         colors1.add("Orange");
@@ -17,7 +14,7 @@ public class HomeWork {
         colors1.add("Yellow");
         System.out.println("First edition: " + colors1);
 
-        List<String> colors2 = new ArrayList<String>();
+        List<String> colors2 = new ArrayList<>();
         colors2.add("Smetana");
         colors2.add("Margarin");
         colors2.add("Kopengagen");
@@ -62,34 +59,35 @@ public class HomeWork {
         // Поиск конкретного элемента
         // Search the value Red
 
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a color of an required element in arraylist");
-        String Elementcolor = Scanner.nextLine(); */
+        String consoleColor = scanner.nextLine();
 
-        if (colors1.contains("Red")) {
+        if (colors1.contains("consoleColor")) {
             System.out.println("Found the element");
         } else {
             System.out.println("There is no such element");
         }
 
-       /* System.out.println("Ща будет мясо nr 1");
+        System.out.println("Ща будет мясо nr 1");
         for (int i = 0; i < colors1.size(); i++) {
             System.out.print(colors1.get(i));
             System.out.print(", ");
 
             System.out.println("For-each loop");
             for (String color : colors1) {
-                System.out.println(colors1);
+                System.out.println(color);
                 System.out.println(", ");
-            } */
+            }
 
             ListIterator<String> iterate = colors1.listIterator();
             System.out.println("Iterating over ArrayList:");
-            while(iterate.hasNext()) {
+            while (iterate.hasNext()) {
                 System.out.println(iterate.next() + ", ");
             }
         }
     }
+}
 
 
 
