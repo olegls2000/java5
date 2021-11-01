@@ -32,6 +32,18 @@ public abstract class AbstractVehicle {
 
     }
 
+    public AbstractVehicle(Manufacturer manufacturer) {
+        this.releaseDate = LocalDate.of(2009, 3, 20);
+        this.techState = BtaUtils.getRandom(MIN_TECH_STATE, MAX_TECH_STATE);
+
+        Manufacturer[] allManufacturers = Manufacturer.values();
+        int randomIndex = BtaUtils.getRandom(0, allManufacturers.length - 1);
+        this.manufacturer = manufacturer;
+
+        this.seats = BtaUtils.getRandom(MIN_SEATS, MAX_SEATS);
+
+    }
+
     //TODO getters and setter
 
     public LocalDate getReleaseDate() {

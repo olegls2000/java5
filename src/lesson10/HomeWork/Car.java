@@ -8,4 +8,10 @@ public class Car extends AbstractVehicle {
         //TODO add random value
         this.seats = getSeats();
     }
+
+    public Car(Manufacturer manufacturer) {
+        super(manufacturer);
+        this.seats = 4;
+    }
+
 }
