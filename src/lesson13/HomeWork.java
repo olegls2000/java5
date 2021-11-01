@@ -4,8 +4,8 @@ import java.util.*;
 
 public class HomeWork {
     public static void main(String[] args) {
-        ArrayList<String> color = new ArrayList<String>();
-        ArrayList<String> coloradd = new ArrayList<String>();
+        List<String> color = new ArrayList<String>();
+        List<String> coloradd = new ArrayList<String>();
         color.add("Red");
         color.add("Green");
         color.add("Blue");
@@ -19,7 +19,8 @@ public class HomeWork {
         color.add("Orange");
         color.add("Dark blue");
         color.add(0, "Flash"); // ставим Flash первым в индексе
-        System.out.print(color + "" + coloradd); // как эту чёртову хрень замиксовать со всем списком?
+        boolean isAdded = color.addAll(coloradd);
+        System.out.print(color); // как эту чёртову хрень замиксовать со всем списком?
         String element2 = color.get(7);
         System.out.println();
         System.out.println();
@@ -55,15 +56,15 @@ public class HomeWork {
         }
         if (color.contains("Blue")) {
             System.out.println("Первый элемент найден");
-    } else {
-        System.out.println("Первый элемент НЕ найден");
-    }
-            if(coloradd.contains("Ultramarine")) {
+        } else {
+            System.out.println("Первый элемент НЕ найден");
+        }
+        if (coloradd.contains("Ultramarine")) {
             System.out.println("Второй элемент найден");
         } else {
             System.out.println("Второй элемент НЕ найден");
         }
-        if(land.contains("Estonia")) {
+        if (land.contains("Estonia")) {
             System.out.println("Страна найдена");
         } else {
             System.out.println("Страна НЕ найдена");
