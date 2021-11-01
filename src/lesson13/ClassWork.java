@@ -28,6 +28,5 @@ public class ClassWork {
         setString.add(new TestClass(2, "2"));
         setString.add(new TestClass(2, "2"));
         System.out.println(setString.size());
-
     }
 }
