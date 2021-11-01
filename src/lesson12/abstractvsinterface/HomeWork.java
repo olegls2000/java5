@@ -82,11 +82,11 @@ public class HomeWork {
     }
 
     public static void printWordsStarAndEndSameLetter(String[] string, String symbol) {
-//TODO
+
 
 
         for (int i = 0; i < string.length; i++) {
-            if (string[i].startsWith(symbol) == symbol || string[i].endsWith(symbol)==symbol) {
+            if (string[i].startsWith(symbol)  && string[i].endsWith(symbol)) {
                 System.out.println(string[i]);
 
             }
