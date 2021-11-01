@@ -24,9 +24,11 @@ public class ClassWork {
         System.out.println(myList);
 
 
-        Set<TestClass> setString = new HashSet<>();  // что делает эта часть кода?
-        setString.add(new TestClass(2, "2"));
-        setString.add(new TestClass(2, "2"));
-        System.out.println(setString.size());
+        Set<TestClass> hashSet = new HashSet<>();  // считаем хэш по count и name
+        hashSet.add(new TestClass(2, "2"));
+        hashSet.add(new TestClass(3, "3"));
+        hashSet.add(new TestClass(3, "4"));
+        hashSet.add(new TestClass(2, "2")); // выкидываем эту уйню
+        System.out.println(hashSet.size());
     }
 }
