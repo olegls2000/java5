@@ -52,5 +52,13 @@ public class Animal implements Comparable<Animal> {
         this.lifeDuration = lifeDuration;
     }
 
-
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", kind='" + kind + '\'' +
+                ", weight=" + weight +
+                ", lifeDuration=" + lifeDuration +
+                '}';
+    }
 }
