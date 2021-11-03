@@ -122,6 +122,7 @@ public class BtaQueue<E> implements Queue<E> {
 
     @Override
     public E poll() {
+        //TODO ... remove head
         return null;
     }
 
