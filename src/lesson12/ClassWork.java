@@ -3,7 +3,8 @@ package lesson12;
 import java.net.SocketOption;
 import java.util.Locale;
 
-public class ClassWork {   public static void main(String[] args) {
+public class ClassWork {
+    public static void main(String[] args) {
         String strPool = "My String";
         String strPool2 = "My String";
         String strHeap = new String("My String");
