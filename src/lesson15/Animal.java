@@ -1,6 +1,6 @@
 package lesson15;
 
-public class Animal implements Comparable<Animal>{
+public class Animal implements Comparable<Animal> {
     private String name;
     private String kind;
     private int weight;
@@ -9,6 +9,10 @@ public class Animal implements Comparable<Animal>{
     public Animal() {
     }
 
+    @Override
+    public int compareTo(Animal objectToCompare) {
+        return objectToCompare.getLifeDuration() - this.lifeDuration;
+    }
     public Animal(String name, String kind, int weight, int liveDuration) {
         this.name = name;
         this.kind = kind;
@@ -48,8 +52,5 @@ public class Animal implements Comparable<Animal>{
         this.lifeDuration = lifeDuration;
     }
 
-    @Override
-    public int compareTo(Animal o) {
-        return 0;
-    }
+
 }
