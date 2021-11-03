@@ -46,8 +46,6 @@ public class ClassWork {
 
         Car value = carsMap.get(Manufacturer.HONDA);
         boolean isContain = carsMap.containsValue(car3);
-
-
         Set<Map.Entry<Manufacturer, Car>> entries = carsMap.entrySet();
 
         for (Map.Entry<Manufacturer, Car> entry : entries) {
@@ -63,7 +61,7 @@ public class ClassWork {
         mapStudent.put(student1.getAge(), student1);
         mapStudent.put(student1.getAge(), student2);
         //Map<Integer, Student> mapStudent = new TreeMap<>();
-
+        //
 
 
     }

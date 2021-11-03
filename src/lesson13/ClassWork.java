@@ -28,10 +28,5 @@ public class ClassWork {
         hashSet.add(new TestClass(3, "3"));
         hashSet.add(new TestClass(2, "2"));
         System.out.println(hashSet.size());
-
-
-
-
-
     }
 }
