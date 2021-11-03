@@ -10,4 +10,7 @@ public class Car extends AbstractVehicle {
         this.seats = BtaUtils.getRandom(4, 7);
     }
 
+    public Car(Manufacturer bmw) {
+
+    }
 }

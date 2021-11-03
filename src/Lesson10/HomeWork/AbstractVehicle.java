@@ -24,6 +24,13 @@ public abstract class AbstractVehicle {
         this.techState = BtaUtils.getRandom(MIN_TECH_STATE, MAX_TECH_STATE);
         this.manufacturer = Manufacturer.values()[Manufacturer.values().length-1];
         this.minMaxPrice = BtaUtils.getRandom(MIN_PRICE,MAX_PRICE);
+
+    }
+    public AbstractVehicle (Manufacturer manufacturer){
+        this.manufacturer = manufacturer;
+        this.releaseDate = LocalDate.of(BtaUtils.getRandom(2000, 2021), 3 ,20);
+        this.techState = BtaUtils.getRandom(MIN_TECH_STATE, MAX_TECH_STATE);
+
     }
 
     public LocalDate getReleaseDate() {
