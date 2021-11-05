@@ -1,11 +1,13 @@
 package lesson15;
 
+import org.w3c.dom.Node;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 
 /**
- * FIFO Queue First In -> Firs Out
+ * FIFO Queue First In -> First Out
  *
  * @param <E>
  */
@@ -122,8 +124,8 @@ public class BtaQueue<E> implements Queue<E> {
 
 	@Override
 	public E poll() {
-		//TODO...remove head
-		return null;
+		final Node<E> f = first;
+		return (f == null) ? null : unlinkFirst(f);
 	}
 
 	@Override
@@ -133,7 +135,7 @@ public class BtaQueue<E> implements Queue<E> {
 
 	@Override
 	public E peek() {
-		//TODO ...
-		return null;
+		final Node<E> f = first;
+		return (f == null) ? null : f.item;
 	}
 }
