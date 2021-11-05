@@ -10,8 +10,13 @@ public class ClassWork {
         Point b = new Point(2, 2);
         Point c = new Point(3, 3);
 
-        Triangle triangle = new Triangle(a, b, c);
-        triangle.setA(new Point(-1, -1));
+        try {
+            Triangle triangle = new Triangle(a, b, c);
+            triangle.setA(new Point(-1, -1));
+        } catch (Triangle.InvalidTriangleException e) {
+            System.out.println(e.getMessage());
+            //throw new RuntimeException(e);
+        }
 
     }
 }

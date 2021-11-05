@@ -37,4 +37,11 @@ public class Calculator {
             exception.printStackTrace();
         }
     }
+
+    public void method1() throws Exception1{
+        throw new Exception1();
+    }
+    public void method2() throws Exception2{
+        throw new Exception2();
+    }
 }

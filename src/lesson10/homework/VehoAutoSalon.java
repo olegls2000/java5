@@ -7,7 +7,6 @@ public class VehoAutoSalon implements AutoSalonApi {
 
     private AbstractVehicle[] parking = new AbstractVehicle[PARKING_PLACES];
 
-
     public VehoAutoSalon(long balance) {
         this.balance = balance;
     }

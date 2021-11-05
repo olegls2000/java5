@@ -1,5 +1,6 @@
 package model;
 
+import lesson16.Exception1;
 import utils.BtaUtils;
 
 public class Triangle {
@@ -7,7 +8,7 @@ public class Triangle {
     private Point b;
     private Point c;
 
-    public Triangle(Point one, Point two, Point three) {
+    public Triangle(Point one, Point two, Point three) throws InvalidTriangleException {
         pointOneLineCheck(one, two, three);
         this.a = one;
         this.b = two;
@@ -18,7 +19,7 @@ public class Triangle {
         return a;
     }
 
-    public void setA(Point a) {
+    public void setA(Point a) throws InvalidTriangleException {
         pointOneLineCheck(a, this.b, this.c);
         this.a = a;
     }
@@ -27,7 +28,7 @@ public class Triangle {
         return b;
     }
 
-    public void setB(Point b) {
+    public void setB(Point b) throws InvalidTriangleException {
         pointOneLineCheck(this.a, b, this.c);
         this.b = b;
     }
@@ -36,7 +37,7 @@ public class Triangle {
         return c;
     }
 
-    public void setC(Point c) {
+    public void setC(Point c) throws InvalidTriangleException {
         pointOneLineCheck(this.a, this.b, c);
         this.c = c;
     }
@@ -47,12 +48,40 @@ public class Triangle {
                 BtaUtils.calculateDistance(a, c);
     }
 
-    private void pointOneLineCheck(Point one, Point two, Point three) {
+    private void pointOneLineCheck(Point one, Point two, Point three) throws InvalidTriangleException {
         double lefPart = (three.getY() - one.getY()) / (two.getY() - one.getY());
         double rightPart = (three.getX() - one.getX()) / (two.getX() - one.getX());
         if (lefPart == rightPart) {
-            System.out.println("Triangle impossible!!");
-            throw new RuntimeException();
+            throw new InvalidTriangleException("Triangle impossible!!");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static class InvalidTriangleException extends Exception {
+        public InvalidTriangleException(String message) {
+            super(message);
         }
     }
 }
