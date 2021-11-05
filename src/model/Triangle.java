@@ -1,12 +1,15 @@
 package model;
 
+import exception.InvalidTriangleException;
+import utils.BtaUtils;
+
 public class Triangle {
 
     private Point a;
     private Point b;
     private Point c;
 
-    public Triangle(Point one, Point two, Point three) {
+    public Triangle(Point one, Point two, Point three) throws InvalidTriangleException {
 
         pointOneLineCheck(one, two, three);
 
@@ -19,12 +22,12 @@ public class Triangle {
         return a;
     }
 
-    public void setA(Point a) {
+    public void setA(Point a) throws InvalidTriangleException {
         pointOneLineCheck(a, this.b, this.c);
         this.a = a;
     }
 
-    public Point getB() {
+    public Point getB() throws InvalidTriangleException {
         pointOneLineCheck(this.a, b, this.c);
         return b;
     }
@@ -33,7 +36,7 @@ public class Triangle {
         this.b = b;
     }
 
-    public Point getC() {
+    public Point getC() throws InvalidTriangleException {
         pointOneLineCheck(this.a, this.b, c);
         return c;
     }
@@ -42,17 +45,19 @@ public class Triangle {
         this.c = c;
     }
 
-    public double calculatePerimer() {
+    public double calculatePerimeter() {
 
-        return 0.0d;
+        return BtaUtils.calculateDistance(a, b) +
+                BtaUtils.calculateDistance(b, c) +
+                BtaUtils.calculateDistance(a, c);
     }
 
-    private void pointOneLineCheck(Point one, Point two, Point three) {
+    private void pointOneLineCheck(Point one, Point two, Point three) throws InvalidTriangleException {
         double lefPart = (c.getY() - a.getY()) / (two.getY() - one.getY());
         double rightPart = (c.getX() - a.getX()) / (two.getX() - one.getX());
         if (lefPart == rightPart) {
             System.out.println("Triangle impossible!");
-            throw new RuntimeException();
+            throw new InvalidTriangleException("Triangle impossible!");
         }
     }
 }

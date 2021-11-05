@@ -122,7 +122,9 @@ public class BtaQueue<E> implements Queue<E> {
 
     @Override
     public E poll() {
-        //TODO ... remove head
+    if(container.length == 0) {
+
+    }
         return null;
     }
 
@@ -133,7 +135,9 @@ public class BtaQueue<E> implements Queue<E> {
 
     @Override
     public E peek() {
-        //TODO...
-        return null;
+        if(isEmpty()) {
+            return null;
+        }
+        return (E)container[0];
     }
 }
