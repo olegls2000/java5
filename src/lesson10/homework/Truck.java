@@ -4,6 +4,11 @@ public class Truck extends AbstractVehicle  {
 
     private int carrying;
 
+    @Override
+    public int getPrice() {
+        return 0;
+    }
+
     public Truck() {
         super();
         //TODO add random value

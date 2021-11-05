@@ -1,5 +1,7 @@
 package model;
 
+import lesson10.homework.Manufacturer;
+
 public class Car {
     private static final int MIN_PRICE = 80000;
     private static final int MAX_PRICE = 400000;
@@ -9,6 +11,9 @@ public class Car {
 
     private int price;
     private int weight;
+
+    public Car(Manufacturer toyota) {
+    }
 
     //TODO Rename
     public enum colour {

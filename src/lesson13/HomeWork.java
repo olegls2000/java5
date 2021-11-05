@@ -34,11 +34,11 @@ public class HomeWork {
 
         String tempElement = "TEMPCOLOR";
         int index = 14;
-        String elemnt = myColors.get(index);
-        System.out.println("Element index " + index + "  before changes  is : " + elemnt);
+        String element = myColors.get(index);
+        System.out.println("Element index " + index + "  before changes  is : " + element);
 
 
-        myColors.set(index, elemnt + tempElement);
+        myColors.set(index, element + tempElement);
         String changedElement = myColors.get(index);
         System.out.println("Element index " + index + "  after changes  is : " + changedElement);
 

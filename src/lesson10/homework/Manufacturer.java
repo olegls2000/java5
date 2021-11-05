@@ -5,6 +5,7 @@ public enum Manufacturer {
     HONDA,
     MERCEDES,
     TOYOTA,
-    BMW
+    BMW,
+    JEEP
 
 }
