@@ -20,10 +20,10 @@ public class ClassWork {
 		boolean wasDeleted = myList.remove("6");
 		boolean isContains = myList.containsAll(Arrays.asList("One", "6"));
 
-		Set<TestClass> setString = new HashSet<>();
-		setString.add(new TestClass(2, "2"));
-		setString.add(new TestClass(2, "2"));
-		System.out.println(setString.size());
+		Set<TestClass> hashSet = new HashSet<>();
+		hashSet.add(new TestClass(2, "2"));
+		hashSet.add(new TestClass(2, "2"));
+		System.out.println(hashSet.size());
 
 
 	}

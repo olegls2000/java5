@@ -6,7 +6,7 @@ import java.util.Collections;
 //1
 public class HomeWork {
 	public static void main(String[] args) {
-		ArrayList<String> color = new ArrayList<String>();
+		ArrayList<String> color = new ArrayList<>();
 		color.add("Red");
 		color.add("Green");
 		color.add("Blue");
@@ -14,7 +14,7 @@ public class HomeWork {
 		color.add("Orange");
 		color.add("White");
 		System.out.println(color);
-		ArrayList<String> letter = new ArrayList<String>();
+		ArrayList<String> letter = new ArrayList<>();
 		letter.add("A");
 		letter.add("B");
 		letter.add("C");

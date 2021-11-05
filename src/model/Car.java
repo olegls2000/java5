@@ -8,13 +8,17 @@ public class Car {
 	private static final int MIN_WEIGHT = 1200;
 	private static final int MAX_WEIGHT = 2500;
 
-    private int price;
-    private int weight;
+	private int price;
+	private int weight;
 
 	public Car(int price, int weight) {
 		priceCheck(price);
 		this.price = price;
 		this.weight = weight;
+	}
+
+	public Car() {
+
 	}
 
 	private void priceCheck(int price) {
@@ -24,7 +28,8 @@ public class Car {
 			throw new RuntimeException();
 		}
 	}
-	public void  setPrice(int price) {
+
+	public void setPrice(int price) {
 		priceCheck(price);
 		this.price = price;
 	}
@@ -32,10 +37,12 @@ public class Car {
 	public int getPrice() {
 		return price;
 	}
+
 	public void setWeight(int weight) {
 		weightCheck(weight);
 		this.weight = weight;
 	}
+
 	public int getWeight() {
 		return weight;
 	}
@@ -48,3 +55,4 @@ public class Car {
 		}
 	}
 }
+

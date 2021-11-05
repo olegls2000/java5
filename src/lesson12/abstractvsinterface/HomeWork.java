@@ -16,6 +16,45 @@ public class HomeWork {
 			System.out.println("Longest word: '" + longWord + "'");
 			System.out.println("Shortest word: '" + shortWord + "'");
 		}
-	}
 
+		public static void getSwapLongestAndShortestWord(String[] string) {
+
+			int tempIndexLongestWord = getLongestWord(string);
+
+			int tempIndexShortestWord = getShortestWord(string);
+			int indexTemp;
+			indexTemp = tempIndexLongestWord;
+			tempIndexLongestWord = tempIndexShortestWord;
+			tempIndexShortestWord = indexTemp;
+
+
+			System.out.println();
+			System.out.println(indexTemp + tempIndexLongestWord + tempIndexShortestWord);
+		}
+
+		private static int getShortestWord(String[] string) {
+
+
+			return 0;
+		}
+
+		private static int getLongestWord(String[] string) {
+			return 0;
+		}
+
+		public static int printWordsStarAndEndSameLetter(String[] string, String symbol) {
+
+
+			for (int i = 0; i < string.length; i++) {
+				if (string[i].startsWith(symbol) && string[i].endsWith(symbol)) {
+					System.out.println(string[i]);
+
+				}
+
+			}
+
+
+			return 0;
+		}
 	}
+}

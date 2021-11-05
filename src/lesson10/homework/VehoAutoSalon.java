@@ -35,16 +35,9 @@ public class VehoAutoSalon implements AutoSalonApi {
 		return freeParkingSpot;
 	}
 
-	@Override
-	public int sellVehicle(int i) {
-		return 0;
-	}
 
-	@Override
-	public void report() {
 
-	}
-		/*@Override
+		@Override
 		public int sellVehicle ( int i){
 			if (i >= PARKING_PLACES || i < 0) {
 				//TODO ...
@@ -57,14 +50,3 @@ public class VehoAutoSalon implements AutoSalonApi {
 
 		}
 	}
-
-	@Override
-	public int sellVehicle(int i) {
-		return 0;
-	}
-
-	@Override
-	public void report() {
-
-	}*/
-}
