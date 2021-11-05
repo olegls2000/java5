@@ -1,17 +1,18 @@
 package model;
 
+import exception.InvalidTriangleException;
 import utils.BtaUtils;
 
-//TODO apply INCAPSULATION - ok
 public class Triangle {
     private Point a;
     private Point b;
     private Point c;
 
-    public Triangle(Point a, Point b, Point c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(Point one, Point two, Point three) throws Exception {
+        pointOneLineCheck(one, two, three);
+        this.a = one;
+        this.b = two;
+        this.c = three;
     }
 
     public Point getA() {
@@ -42,5 +43,12 @@ public class Triangle {
         return BtaUtils.calculateDistance(a, b) +
                 BtaUtils.calculateDistance(b, c) +
                 BtaUtils.calculateDistance(a, c);
+    }
+    private void pointOneLineCheck(Point one, Point two, Point three) throws Exception {
+        double lefPart = (three.getY() - one.getY()) / (two.getY() - one.getY());
+        double rightPart = (three.getX() - one.getX()) / (two.getX() - one.getX());
+        if (lefPart == rightPart) {
+            throw new InvalidTriangleException("Triangle impossible");
+        }
     }
 }

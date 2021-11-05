@@ -2,6 +2,8 @@ package lesson16;
 
 // то что закомментировано = первый метод
 
+import model.Triangle;
+
 public class ClassWork {
     public static void main(String[] args) throws Exception { // добавлено throws Exception
         Calculator calculator = new Calculator();
@@ -23,5 +25,23 @@ public class ClassWork {
         }
         /*System.out.println("After exception!!!");*/
         calculator.call(0, 0);
+
+        try {
+            calculator.method1();
+            calculator.method2();
+            calculator.calculateExc(1, 2);
+        } catch (Exception1 myException) {
+            System.out.println("Handler for Exception1 !!!");
+        } catch (Exception2 myException) {
+            System.out.println("Handler for Exception2 !!!");
+        } catch (Exception exception) {
+            System.out.println("Handler exception!!!");
+        }
+
+        try {
+            Triangle triangle = new Triangle(null, null, null);
+        } catch (Exception InvalidTriangleException) {
+            System.out.println("Handler for Exception Triangle !!!");
+        }
     }
 }
