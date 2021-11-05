@@ -1,7 +1,6 @@
 package lesson15;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 import java.util.Queue;
 
 /**
@@ -93,30 +92,29 @@ public class BtaQueue<E> implements Queue<E> { // E = Animal во вкладке
     public <T> T[] toArray(T[] a) {
         return null;
     }
-//  !!!!!!!! содрать !!!!
-//    @Override
-//    public boolean remove(Object o) {
-//        int indexToRemove = -1;
-//        for (int i = 0; i < container.length; i++) {
-//            if (container[i].equals(o)) {
-//                indexToRemove = i;
-//                break;
-//            }
-//        }
-//        if (indexToRemove < 0) {
-//            return false;
-//        }
-//        int newSize = container.length - 1;
-//        Object[] tempContainer = new Object[newSize];
-//        for (int i = 0; i < container.length; i++) {
-//            if(i<indexToRemove) {
-//                tempContainer[i] = container[i];
-//            }else{
-//                tempContainer[i] = container[i+1];
-//            }
-//        }
-//        return true;
-//    }
+
+    //  !!!!!!!! переписать !!!!
+public boolean remove(Object o) {
+    int indexToRemove = -1;
+    for (int i = 0; i < container.length; i++) {
+        if(container[i].equals(o)) {
+            indexToRemove = i;
+            break;
+        }
+    }
+    if(indexToRemove < 0) {
+        return false;
+    }
+    int newSize = container.length-1;
+    Object[] tempContainer = new Object[newSize];
+    for (int i = 0; i < indexToRemove; i++) {
+        tempContainer[i] = container[i];
+    }
+    for (int i = indexToRemove + 1; i < container.length - 1; i++) {
+        tempContainer[i] = container[i + 1];
+    }
+    return true;
+}
 
     @Override
     public boolean containsAll(Collection<?> c) {
