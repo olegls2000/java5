@@ -4,6 +4,7 @@ import exception.InvalidTriangleException;
 import exception.UnsuffisientBalanceException;
 import exception.UnsuffisientPlacesException;
 import model.AutoStore;
+import model.Car;
 import model.Point;
 import model.Triangle;
 
@@ -21,7 +22,9 @@ public class ClassWork {
         }
 
         try {
-            autoStore.buyAuto(null);
+            Car toyota = new Car(5000,1500);
+
+            autoStore.buyAuto(toyota);
         } catch (UnsuffisientBalanceException e) {
             System.out.println(e.getMessage());
         }
