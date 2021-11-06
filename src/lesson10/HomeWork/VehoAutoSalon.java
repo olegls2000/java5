@@ -25,7 +25,8 @@ public class VehoAutoSalon implements AutoSalonApi{
     }
 
     @Override
-    public void perort() {
+    public void report() {
 
     }
+
 }

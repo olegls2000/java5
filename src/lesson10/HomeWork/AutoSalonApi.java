@@ -5,5 +5,5 @@ public interface AutoSalonApi {
 
     int sellVehicle(int i);
 
-    void perort();
+    void report();
 }
