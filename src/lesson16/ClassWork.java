@@ -1,13 +1,30 @@
 package lesson16;
 
 import exception.InvalidTriangleException;
+import exception.UnsuffisientBalanceException;
+import exception.UnsuffisientPlacesException;
+import model.AutoStore;
 import model.Point;
 import model.Triangle;
 
 public class ClassWork {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Calculator calculator = new Calculator();
+        AutoStore autoStore = new AutoStore();
+
+        try {
+            autoStore.sellAuto(3);
+
+        } catch (UnsuffisientPlacesException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            autoStore.buyAuto(null);
+        } catch (UnsuffisientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
 
         //Error example
         calculator.calculateErr(1, 1);

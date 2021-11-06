@@ -1,5 +1,7 @@
 package model;
-import model.Car;
+import exception.UnsuffisientBalanceException;
+import exception.UnsuffisientPlacesException;
+
 import java.util.Scanner;
 
 public class AutoStore {
@@ -17,7 +19,7 @@ public class AutoStore {
 
     }
 
-    public Car sellAuto(int parkingPlace) {
+    public Car sellAuto(int parkingPlace) throws Exception {
         int minValue = 0;
         int maxValue = parking.length - 1;
 
@@ -25,7 +27,8 @@ public class AutoStore {
             System.out.println("Parking place: " + parkingPlace + " is invalid. " +
                     "Must be in range: [" +
                     minValue + ", " + maxValue + "]");
-            return null;
+            throw new UnsuffisientPlacesException("Parking place is invalid. Must be in range" +
+                    minValue + ", " + maxValue);
         }
 
         Car carToSale = parking[parkingPlace];
@@ -41,12 +44,12 @@ public class AutoStore {
 
     }
 
-    public void buyAuto(Car auto) {
+    public void buyAuto(Car auto) throws Exception {
         // TODO
         // check free place, balance, auto not null
         if (balance < auto.getPrice()) {
             System.out.println("Impossible to buy a Car. Not sufficient balance (" + balance + "). Required: " + auto.getPrice() + "EUR");
-            return;
+            throw new UnsuffisientBalanceException("Impossible to buy a Car. Not sufficient balance (\" + balance + \"). Required: \" + auto.getPrice() + \"EUR");
         }
 
         int freeParkingPlace = getFreeParkingPlace();
