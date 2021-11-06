@@ -45,8 +45,6 @@ public class AutoStore {
     }
 
     public void buyAuto(Car auto) throws Exception {
-        // TODO
-        // check free place, balance, auto not null
         if (balance < auto.getPrice()) {
             System.out.println("Impossible to buy a Car. Not sufficient balance (" + balance + "). Required: " + auto.getPrice() + "EUR");
             throw new UnsuffisientBalanceException("Impossible to buy a Car. Not sufficient balance (\" + balance + \"). Required: \" + auto.getPrice() + \"EUR");
