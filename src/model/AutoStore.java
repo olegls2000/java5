@@ -1,4 +1,7 @@
 package model;
+import exception.InsufficientBalanceException;
+import exception.InsufficientPlacesException;
+
 import java.util.*;
 
 public class AutoStore {
@@ -21,18 +24,21 @@ public class AutoStore {
         parking[place] = car;
     }
 
-    public Car sellAuto (int parkingPlace){
+    public Car sellAuto (int parkingPlace) throws InsufficientPlacesException{
         int minValue = 0;
         int maxValue = parking.length-1;
 
-        if (parkingPlace < minValue || parkingPlace > maxValue){
-            System.out.println("Parking place: " +
-                    parkingPlace + "is invalid. Must be in range: [" +
-                    minValue + " - " + maxValue + "]");
-            return null;
-        }
-        Car checkCarToSale = parking[parkingPlace];
-        if(checkCarToSale == null){
+        try {
+            if (parkingPlace < minValue || parkingPlace > maxValue){
+                throw new InsufficientPlacesException ("Parking place: " +
+                        parkingPlace + "is invalid. Must be in range: [" +
+                        minValue + " - " + maxValue + "]");
+            }
+            Car checkCarToSale = parking[parkingPlace];
+            if(checkCarToSale == null){
+                throw new InsufficientPlacesException("No Car has been found on parking place: " +  parkingPlace);
+            }
+        } catch (InsufficientPlacesException e) {
             System.out.println("No Car has been found on parking place: " +  parkingPlace);
         }
 
@@ -49,9 +55,13 @@ public class AutoStore {
         //TODO add parking state
     }
 
-    public void buyAuto (Car auto)  {
-        if(balance < auto.getPrice()){
-            System.out.println("No sufficient balance (" + balance+ "). Required: " + auto.getPrice());
+    public void buyAuto (Car auto) throws InsufficientBalanceException, InsufficientPlacesException {
+        try {
+            if(balance < auto.getPrice()){
+                throw new InsufficientBalanceException("No sufficient balance (" + balance+ "). Required: " + auto.getPrice());
+            }
+        } catch (Exception e) {
+            System.out.println("No sufficient balance (" + balance+ "). Required: " + auto.getPrice());;
         }
 
         int freeParkingPlace = -1;
@@ -61,7 +71,11 @@ public class AutoStore {
                 break;
             }
         }
-        if(freeParkingPlace == -1){
+        try {
+            if(freeParkingPlace == -1){
+                throw new InsufficientPlacesException("Impossible to buy a car. No free parking places");
+            }
+        } catch (InsufficientPlacesException e) {
             System.out.println("Impossible to buy a car. No free parking places");
         }
 

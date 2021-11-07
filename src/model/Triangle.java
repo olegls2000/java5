@@ -1,11 +1,13 @@
 package model;
 
+import exception.InvalidTriangleException;
+
 public class Triangle {
     private Point a;
     private Point b;
     private Point c;
 
-    public Triangle(Point one, Point two, Point three) {
+    public Triangle (Point one, Point two, Point three) throws InvalidTriangleException {
 
         pointOnelineCheck(one, two, three);
 
@@ -23,7 +25,7 @@ public class Triangle {
         return a;
     }
 
-    public void setA(Point a) {
+    public void setA(Point a) throws InvalidTriangleException {
         pointOnelineCheck(a, this.b, this.c);
     }
 
@@ -31,7 +33,7 @@ public class Triangle {
         return b;
     }
 
-    public void setB(Point b) {
+    public void setB(Point b) throws InvalidTriangleException {
 
         pointOnelineCheck(this.a, b, this.c);
 
@@ -42,19 +44,18 @@ public class Triangle {
         return c;
     }
 
-    public void setC(Point c) {
+    public void setC(Point c) throws InvalidTriangleException {
 
         pointOnelineCheck(this.a, this.b, c);
     }
 
-    private void pointOnelineCheck(Point one, Point two, Point three) {
+    private void pointOnelineCheck(Point one, Point two, Point three) throws InvalidTriangleException{
 
         double leftPart = (three.getY() - one.getY()) / (two.getY() - one.getY());
         double rightPart = (three.getX() - one.getX()) / (two.getX() - one.getX());
 
         if (leftPart == rightPart) {
-            System.out.println("Triangle impossible");
-            throw new RuntimeException();
+            throw new InvalidTriangleException("Triangle impossible!");
         }
 
         this.a = one;

@@ -1,4 +1,5 @@
 package Lesson9;
+import exception.InsufficientPlacesException;
 import model.AutoStore;
 import model.Car;
 import model.Director;
@@ -12,13 +13,21 @@ public class ClassWork {
         Car bmw = new Car(100,1000);
         Car toyota = new Car(200, 2500);
         Car honda = new Car(1600, 1200);
-        autoStore.buyAuto(bmw);
-        autoStore.buyAuto(toyota);
-        autoStore.buyAuto(honda);
+        try {
+            autoStore.buyAuto(bmw);
+            autoStore.buyAuto(toyota);
+            autoStore.buyAuto(honda);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        autoStore.sellAuto(0);
-        autoStore.sellAuto(6);
-        autoStore.sellAuto(2);
+        try {
+            autoStore.sellAuto(0);
+            autoStore.sellAuto(6);
+            autoStore.sellAuto(2);
+        } catch (InsufficientPlacesException e) {
+            e.getMessage();
+        }
 
         Director dir1 = new Director(10, "oleg", "tt");
 
