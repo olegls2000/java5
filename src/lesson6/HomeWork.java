@@ -5,7 +5,7 @@ import model.Triangle;
 
 public class HomeWork {
 
-	public static void main(String [] args) {
+	public static void main(String [] args) throws Exception {
 		Point a = new Point(0,0);
 		Point b = new Point(0, 2);
 		Point c = new Point(2, 0);

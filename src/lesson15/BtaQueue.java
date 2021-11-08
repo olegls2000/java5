@@ -1,7 +1,5 @@
 package lesson15;
 
-import org.w3c.dom.Node;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
@@ -124,8 +122,16 @@ public class BtaQueue<E> implements Queue<E> {
 
 	@Override
 	public E poll() {
-		final Node<E> f = first;
-		return (f == null) ? null : unlinkFirst(f);
+		if (container.length == 0) {
+			return null;
+		}
+		final E result = (E) container[0];
+		Object[] tempContainer = new Object[container.length - 1];
+		for (int i = 1; i < container.length; i++) {
+			tempContainer[i - 1] = container[i];
+		}
+		container = tempContainer;
+		return result;
 	}
 
 	@Override
@@ -135,7 +141,9 @@ public class BtaQueue<E> implements Queue<E> {
 
 	@Override
 	public E peek() {
-		final Node<E> f = first;
-		return (f == null) ? null : f.item;
+		if (isEmpty()) {
+			return null;
+		}
+		return (E) container[0];
 	}
 }
