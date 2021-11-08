@@ -15,6 +15,11 @@ public class Car extends AbstractVehicle {
         return result;
     }
 
+    @Override
+    public int testMethod() {
+        return 0;
+    }
+
     public Car() {
         //super();
         this.seats = 4;

@@ -1,7 +1,10 @@
 package lesson10.homework;
 
-public class VehoAutoSalon implements AutoSalonApi {
+import java.io.IOException;
 
+public class VehoAutoSalon implements AutoSalonApi<Car> {
+
+    private static final double INTEREST = 1.2;
     private static final int PARKING_PLACES = 8;
     private long balance;
 
@@ -12,7 +15,7 @@ public class VehoAutoSalon implements AutoSalonApi {
     }
 
     @Override
-    public int buyVehicle(AbstractVehicle vehicle) {
+    public int buyVehicle(Car vehicle) {
         final int carPrice = vehicle.getPrice();
         if (balance < carPrice) {
             System.out.println("Not sufficient balance!!!");
@@ -36,15 +39,38 @@ public class VehoAutoSalon implements AutoSalonApi {
     }
 
     @Override
-    public int sellVehicle(int i) {
+    public double sellVehicle(int i) throws InvalidParkingPlaceException {
         if (i >= PARKING_PLACES || i < 0) {
-            //TODO ...
+            throw new InvalidParkingPlaceException("Invalid parking place: " + i +
+                    "! Must be: 0 .." + PARKING_PLACES);
         }
-        return 0;
+        final AbstractVehicle vehicleForSale = parking[i];
+        if (vehicleForSale == null) {
+            throw new InvalidParkingPlaceException("No vehicle on place: " + i);
+        }
+        parking[i] = null;
+        double salesPrice = vehicleForSale.getPrice() * INTEREST;
+        balance = balance + (long) salesPrice;
+
+        return salesPrice;
     }
 
     @Override
     public void report() {
+//TODO ..
+    }
 
+    @Override
+    public Number testMethod(Car... o) throws IOException {
+        int argsLength = o.length;
+
+        return null;
+    }
+
+
+    public static class InvalidParkingPlaceException extends Exception {
+        public InvalidParkingPlaceException(String message) {
+            super(message);
+        }
     }
 }

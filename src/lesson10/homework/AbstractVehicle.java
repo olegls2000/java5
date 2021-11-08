@@ -17,6 +17,8 @@ public abstract class AbstractVehicle {
 
     public abstract int getPrice();
 
+    protected abstract int testMethod();
+
     public AbstractVehicle() {
         //TODO add random values
         this.releaseDate = LocalDate.of(2009, 3, 20);

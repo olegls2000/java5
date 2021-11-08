@@ -1,7 +1,10 @@
 package lesson10;
 
+import lesson10.homework.AbstractVehicle;
 import lesson10.interfaces.WithPerimeter;
 import utils.BtaUtils;
+
+import java.io.Serializable;
 
 public class Triangle implements WithPerimeter {
 
@@ -9,6 +12,10 @@ public class Triangle implements WithPerimeter {
 
     public Triangle() {
         side = BtaUtils.getRandom(3, 8);
+    }
+
+    public Triangle(int side) {
+        this.side = side;
     }
 
     @Override
