@@ -52,7 +52,6 @@ public class AutoStore {
 
     public void report (){
         System.out.println("Balance: " + balance);
-        //TODO add parking state
     }
 
     public void buyAuto (Car auto) throws InsufficientBalanceException, InsufficientPlacesException {

@@ -1,10 +1,11 @@
 package Lesson10.HomeWork;
 
 public interface AutoSalon {
-    int buyVehicle(AbstractVehicle abstractVehicle);
+    void buyVehicle(AbstractVehicle abstractVehicle);
 
-    int sellCar(int i);
+    double sellCar(int place) throws VehoAutoSalon.InvalidParkingPlaceException;
 
     void report();
+
 
 }
