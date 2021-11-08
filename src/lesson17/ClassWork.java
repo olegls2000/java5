@@ -2,13 +2,17 @@ package lesson17;
 
 import lesson10.Triangle;
 
+
 import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
 
+import static utils.BtaReflectionUtils.getDefaultConstructorOrThrow;
+
+
 public class ClassWork {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Object object = new Triangle();
 
         final Class clazz = object.getClass();
@@ -21,23 +25,16 @@ public class ClassWork {
 
         Class triangleClass = object.getClass();
 
-        Set<Triangle> triangles = generateByClass(triangleClass, 9000);
+        Set<Triangle> triangles = generateByClass(Triangle.class, 9000);
+        System.out.println(triangles);
     }
 
-    private static <T> Set<T> generateByClass(Class<T> clazz, int count) {
+    private static <T> Set<T> generateByClass(Class<T> clazz, int count) throws Exception{
         final Set<T> result = new HashSet<>();
-        Constructor defaultConstructor = null;
-        for (Constructor constructor : clazz.getConstructors()) {
-            if (constructor.getParameterCount() == 0) {
-                defaultConstructor = constructor;
-                break;
-            }
-        }
-
-
+        Constructor<T> defaultConstructor = getDefaultConstructorOrThrow(clazz);
         for (int i = 0; i < count; i++) {
-
-
+            final T instance = defaultConstructor.newInstance();
+            result.add(instance);
         }
         return result;
     }
