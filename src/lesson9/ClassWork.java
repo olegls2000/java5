@@ -1,18 +1,31 @@
 package lesson9;
 
+import exception.UnsuffisientBalanceException;
+import exception.UnsuffisientPlacesException;
 import model.*;
 
 public class ClassWork {
 
-    public static void main(String[] args) {
-
-        Car bmw = new Car(100, 1500);
+    public static void main(String[] args) throws UnsuffisientPlacesException, UnsuffisientBalanceException {
+        Car bmw = new Car(3000, 1500);
         Car toyota = new Car(5000, 1500);
-        Car honda = new Car(6600, 1500);
-        AutoStore autostore = new AutoStore();
-        autostore.addCar(bmw, 0);
-        autostore.addCar(toyota, 1);
-        autostore.addCar(honda, 2);
+        Car honda = new Car(6000, 1500);
+        final var autoStore = new AutoStore();
+        autoStore.buyAuto(bmw) ;
+        autoStore.buyAuto(toyota);
+        autoStore.buyAuto(honda);
+
+        try {
+            autoStore.report();
+            autoStore.sellAuto(0);
+            autoStore.report();
+            autoStore.sellAuto(4);
+            autoStore.report();
+            autoStore.sellAuto(1);
+            autoStore.report();
+        } catch (UnsuffisientPlacesException e) {
+            e.printStackTrace();
+        }
 
 
   /*      Director dir1 = new Director(200000, "TTT", "TTT");

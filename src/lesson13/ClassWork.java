@@ -26,7 +26,7 @@ public class ClassWork {
 //        Set<TestClass> setString = new HashSet<>();
 //        setString.add(new TestClass(2, "2"));
 //        setString.add(new TestClass(2, "2"));
-        System.out.println(setString.size());
+//        System.out.println(setString.size());
 
 
     }

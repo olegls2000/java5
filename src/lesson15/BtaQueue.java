@@ -122,10 +122,10 @@ public class BtaQueue<E> implements Queue<E> {
 
     @Override
     public E poll() {
-        //TODO...remove head
         if (container.length == 0) {
-            return false;
+            return null;
         }
+final E result = (E) container[0];
         int newSize = container.length - 1;
         Object[] tempContainer = new Object[newSize];
         for (int i = 1; i < container.length; i++) {
@@ -134,7 +134,7 @@ public class BtaQueue<E> implements Queue<E> {
         container = tempContainer;
 
 
-        return true;
+        return result;
     }
 
     @Override
@@ -144,7 +144,11 @@ public class BtaQueue<E> implements Queue<E> {
 
     @Override
     public E peek() {
-        //TODO ...
-        return null;
+        if (container.length == 0) {
+            return null;
+        }
+            return (E) container[0];
+
+
     }
 }
