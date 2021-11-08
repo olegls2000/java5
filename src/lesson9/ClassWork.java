@@ -24,6 +24,7 @@ public class ClassWork {
         autoStore.report();
         autoStore.sellAuto(1);
 
+
        /* AbstractWorker dir1 = new Director(200000, "TT", "TT");
         AbstractWorker dir2 = new Director(400000, "TT", "TT");
         AbstractWorker dir3 = new Director(300000, "TT", "TT");

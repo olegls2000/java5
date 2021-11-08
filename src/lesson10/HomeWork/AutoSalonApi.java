@@ -1,9 +1,11 @@
 package lesson10.HomeWork;
 
-public interface AutoSalonApi {
-    int bayVehicle(AbstractVehicle vehicle);
+public interface AutoSalonApi <P extends AbstractVehicle>{
+    int bayVehicle(P vehicle);
 
-    int sellVehicle(int i);
+    double sellVehicle(int place) throws VehoAutoSalon.InvalidParkingPlaceException;
 
     void report();
+
+    Number testMethod(P... o) throws Exception;
 }
