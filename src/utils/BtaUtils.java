@@ -7,7 +7,7 @@ public class BtaUtils {
     public static final int MY_LUCKY_NUMBER = 7;
     public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
-    public static void printArray(int[] arrayToPrint) {
+    public static <T>     void printArray(T[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
         for (int i = 0; i < arrayToPrint.length; i++) {
@@ -27,8 +27,8 @@ public class BtaUtils {
         return result;
     }
 
-    public static int[] generateArray(int from, int to, int length) {
-        int[] result = new int[length];
+    public static Integer[] generateArray(int from, int to, int length) {
+        Integer[] result = new Integer[length];
         for (int i = 0; i < result.length; i++) {
             result[i] = getRandom(from, to);
         }
@@ -48,7 +48,7 @@ public class BtaUtils {
         return indexMax;
     }
 
-    public static int getMinValueIndex(int[] array) {
+    public static int getMinValueIndex(Integer[] array) {
 
         int indexMin = 0;
         for (int i = 1; i < array.length; i++) {

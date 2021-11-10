@@ -32,7 +32,7 @@ public class ClassWork {
         printOddNumbers(6);
         printFrom90Till0();
 
-        int[] array =  new int[5];
+        Integer[] array =  new Integer[5];
         int arrayLength = array.length;
         System.out.println("array length = " + arrayLength);
 
