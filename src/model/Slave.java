@@ -19,4 +19,8 @@ public class Slave extends AbstractWorker {
     private void someSecreTMethod(){
         System.out.println(super.getFirstName() + " - need help. Heeelp me!!!!");
     }
+
+    private void greatMethod(){
+        System.out.println(super.getFirstName() + " - I am Great!!!!");
+    }
 }

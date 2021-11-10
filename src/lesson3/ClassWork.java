@@ -37,7 +37,7 @@ public class ClassWork {
         // 90 85 80 75 70 65 60 …. WHILE
         printFrom90Till0();
 
-        int[] array = new int[5];
+        Integer[] array = new Integer[5];
         int[] array1 = new int[6];
         int arrayLength = array.length;
         int arrayLength1 = array1.length;

@@ -1,8 +1,11 @@
 package lesson18;
 
+import lesson10.Circle;
+import model.Point;
 import model.Slave;
-
-import java.lang.reflect.Method;
+import processor.BtaNumberProcessor;
+import utils.BtaReflectionUtils;
+import utils.BtaUtils;
 
 public class ClassWork {
     public static void main(String[] args) throws Exception {
@@ -12,18 +15,20 @@ public class ClassWork {
         //joe.someSecretMethod();
         final var clazz = joe.getClass();
         final Class clazz1 = Slave.class;
-        System.out.println(clazz.getMethods());
-        System.out.println(clazz.getDeclaredMethods());
+        BtaUtils.printArray(clazz.getMethods());
+        BtaUtils.printArray(clazz.getDeclaredMethods());
+        BtaReflectionUtils.invokeMethod(bill, "secRet");
+        BtaReflectionUtils.invokeMethod(joe, "sECRet");
+        BtaReflectionUtils.invokeMethod(joe, "great");
+        BtaReflectionUtils.invokeMethod(bill, "gREat");
 
-        Method secretMethod = null;
-        for (Method method : clazz.getDeclaredMethods()) {
-            final var methodName = method.getName();
-            if( methodName.toUpperCase().contains("SECRET") ){
-                secretMethod  = method;
-            }
-        }
-        secretMethod.invoke(joe);
-        secretMethod.invoke(bill);
-
+        Circle circle = new Circle();
+        BtaReflectionUtils.invokeMethod(circle, "sECRet");
+        final var processor = new BtaNumberProcessor();
+        Point point1 = new Point(2, 5);
+        Point point2 = new Point(9999, 99999);
+        processor.process(point1);
+        processor.process(point2);
     }
+
 }

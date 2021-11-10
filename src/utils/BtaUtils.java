@@ -8,7 +8,7 @@ public class BtaUtils {
     public static final int MY_LUCKY_NUMBER = 7;
     //public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
-    public static void printArray(int[] arrayToPrint) {
+    public static <T>  void printArray(T[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
         for (int i = 0; i < arrayToPrint.length; i++) {
@@ -28,15 +28,15 @@ public class BtaUtils {
         return result;
     }
 
-    public static int[] generateArray(int from, int to, int length) {
-        int[] result = new int[length];
+    public static Integer[] generateArray(int from, int to, int length) {
+        Integer[] result = new Integer[length];
         for (int i = 0; i < result.length; i++) {
             result[i] = getRandom(from, to);
         }
         return result;
     }
 
-    public static int getMaxValueIndex(int[] array) {
+    public static int getMaxValueIndex(Integer[] array) {
         int iMax = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[iMax]) {
@@ -48,7 +48,7 @@ public class BtaUtils {
         return iMax;
     }
 
-    public static int getMinValueIndex(int[] array) {
+    public static int getMinValueIndex(Integer[] array) {
         int iMin = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[iMin]) {
@@ -60,7 +60,7 @@ public class BtaUtils {
         return iMin;
     }
 
-    public static int[] swapElementsInaArray(int index1, int index2, int[] array) {
+    public static Integer[] swapElementsInaArray(int index1, int index2, Integer[] array) {
         int vremennaja = array[index1];
         array[index1] = array[index2];
         array[index2] = vremennaja;

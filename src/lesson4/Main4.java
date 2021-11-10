@@ -12,7 +12,7 @@ public class Main4 {
 
         int[] array = {1, 2, 3, 5};
 
-        int[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5);
+        Integer[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5);
         BtaUtils.printArray(arrayGenerated);
 
         int maxIndex = BtaUtils.getMaxValueIndex(arrayGenerated);
