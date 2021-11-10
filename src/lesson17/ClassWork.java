@@ -7,6 +7,7 @@ import java.lang.reflect.Constructor;
 import java.util.HashSet;
 import java.util.Set;
 
+import static utils.BtaReflectionUtils.generateByClass;
 import static utils.BtaReflectionUtils.getDefaultConstructorOrThrow;
 
 
@@ -24,19 +25,7 @@ public class ClassWork {
         System.out.println("Methods count: " + clazz.getMethods().length);
 
         Class triangleClass = object.getClass();
-
-        Set<Triangle> triangles = generateByClass(Triangle.class, 9000);
+        Set<Triangle> triangles = generateByClass(Triangle.class, 90000000);
         System.out.println(triangles);
     }
-
-    private static <T> Set<T> generateByClass(Class<T> clazz, int count) throws Exception{
-        final Set<T> result = new HashSet<>();
-        Constructor<T> defaultConstructor = getDefaultConstructorOrThrow(clazz);
-        for (int i = 0; i < count; i++) {
-            final T instance = defaultConstructor.newInstance();
-            result.add(instance);
-        }
-        return result;
-    }
-
 }
