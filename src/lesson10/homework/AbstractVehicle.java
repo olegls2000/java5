@@ -19,6 +19,8 @@ public abstract class AbstractVehicle {
 	private Manufacturer manufacturer;
 	private final int seats;
 
+
+
 	public AbstractVehicle() {
 		//TODO add random values
 		this.releaseDate = LocalDate.of(2009, 3, 20);
