@@ -7,11 +7,11 @@ public class ClassWork {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 5};
 
-        int[] arrayGenerated = BtaUtils.generateArray(1,1000,5);
+        Integer [] arrayGenerated = BtaUtils.generateArray(1,1000,5);
         BtaUtils.printArray(arrayGenerated);
 
         //int maxIndex = BtaUtils.printMaxValue(arrayGenerated);
-        int minIndex = BtaUtils.getMinValueIndex(arrayGenerated);
+        Integer minIndex = BtaUtils.getMinValueIndex(arrayGenerated);
 
         //int temp = arrayGenerated[maxIndex];
         //arrayGenerated[maxIndex] = arrayGenerated[minIndex];

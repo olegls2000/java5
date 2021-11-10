@@ -32,7 +32,7 @@ public class ClassWork {
         printOddNumbers(6);
         printFrom90Till0();
 
-        int[] array =  new int[5];
+        Integer[] array =  new Integer[5];
         int arrayLength = array.length;
         System.out.println("array length = " + arrayLength);
 
@@ -93,7 +93,7 @@ public class ClassWork {
         switch (charToPrint) {
             case 'a':
                 System.out.println("You passed character A");
-                //break;
+                break;
             case 'b':
                 System.out.println("You passed character B");
                 break;

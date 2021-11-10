@@ -34,7 +34,6 @@ public class ClassWork {
             T instance = defaultConstructor.newInstance();
             result.add(instance);
 
-
         }
         return result;
 
