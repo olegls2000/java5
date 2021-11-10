@@ -1,8 +1,11 @@
 package model;
 
-public class Point {
+import annotation.BtaNumber;
 
+public class Point {
+    @BtaNumber(min = 0, max = 99)
     private int x;
+    @BtaNumber(min = -99, max = 0)
     private int y;
     private int z;
 

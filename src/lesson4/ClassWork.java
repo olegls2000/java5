@@ -8,7 +8,7 @@ public class ClassWork {
 
         int[] array = {1, 2, 3, 5};
 
-        int[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5); // рандомный массив, и выводит самое большое число из пяти
+        Integer[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5); // рандомный массив, и выводит самое большое число из пяти
         BtaUtils.printArray(arrayGenerated);
 
         // принтуем макс. и минимальное значение в массиве и затем
@@ -29,7 +29,7 @@ public class ClassWork {
         //  System.out.println("after min-max swap: ");
         arrayGenerated = BtaUtils.swapElements(maxIndex, minIndex, arrayGenerated);
         BtaUtils.printArray(arrayGenerated);
-        int[] test = {1, 2, 3, 4};
+        Integer[] test = {1, 2, 3, 4};
         test = BtaUtils.swapElements(0, 3, test);
         BtaUtils.printArray(test);
 

@@ -33,7 +33,7 @@ public class ClassWork {
 
         // массивы
 
-        int[] array = new int[5];
+        Integer[] array = new Integer[5];
         //int[] array2 = new int[6];
         int arrayLength = array.length; //не обязательно, но для дальнейшего использования
         System.out.println(); //перенос строки вывода

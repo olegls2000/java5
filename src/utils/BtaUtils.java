@@ -11,9 +11,9 @@ public class BtaUtils {
     public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
 
-    public static int[] swapElements(int index1, int index2, int[] array) {
+    public static Integer[] swapElements(Integer index1, Integer index2, Integer[] array) {
 
-        int vremennaja = array[index1];
+        Integer vremennaja = array[index1];
         array[index1] = array[index2];
         array[index2] = vremennaja;
         return array;
@@ -29,7 +29,7 @@ public class BtaUtils {
         return array;
     }
 
-    public static int getMaxValueIndex(int[] array) { // ищем самое высокое значение в массиве
+    public static int getMaxValueIndex(Integer[] array) { // ищем самое высокое значение в массиве
         int indexMax = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[indexMax]) {
@@ -41,7 +41,7 @@ public class BtaUtils {
     }
 
 
-    public static int getMinValueIndex(int[] array) { // ищем самое низкое значение в массиве
+    public static int getMinValueIndex(Integer[] array) { // ищем самое низкое значение в массиве
         int indexMin = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[indexMin]) {
@@ -53,7 +53,7 @@ public class BtaUtils {
     }
 
 
-    public static void printMax(int[] array) {
+    public static void printMax(Integer[] array) {
 
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -65,7 +65,7 @@ public class BtaUtils {
     }
 
 
-    public static void printMin(int[] array) {
+    public static void printMin(Integer[] array) {
 
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -77,7 +77,7 @@ public class BtaUtils {
     }
 
 
-    public static void printArray(int[] arrayToPrint) {
+    public static <T> void printArray(T[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
         for (int i = 0; i < arrayToPrint.length; i++) {
@@ -97,8 +97,8 @@ public class BtaUtils {
         return result;
     }
 
-    public static int[] generateArray(int from, int to, int length) {
-        int[] result = new int[length];
+    public static Integer[] generateArray(int from, int to, int length) {
+        Integer[] result = new Integer[length];
         for (int i = 0; i < result.length; i++) {
             result[i] = getRandom(from, to);
         }
