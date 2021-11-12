@@ -1,10 +1,20 @@
 package model.specific;
 
+import annotation.BtaNumber;
+import annotation.BtaStartWith;
 import model.AbstractWorker;
-
-    public class Director extends AbstractWorker {
-
+public class Director extends AbstractWorker {
+    //@BtaStartwith(value = "A")
+    @BtaStartWith("A")
     private String department;
+
+    //@BtaStartWith("A")
+    @BtaNumber(min = 0, max = 99)
+    private int employCount;
+
+
+
+    private String department1;
 
     public Director(int salary, String firstName, String department) {
         super(salary, firstName);

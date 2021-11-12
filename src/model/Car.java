@@ -17,6 +17,14 @@ public class Car {
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "price=" + price +
+                ", weight=" + weight +
+                '}';
+    }
+
     private void priceCheck(int price) {
         if (price < MIN_PRICE || price > MAX_PRICE) {
             System.out.println("Car price (" + price + " EURO) is invalid!" +

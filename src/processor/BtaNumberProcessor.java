@@ -4,7 +4,7 @@ import annotation.BtaNumber;
 
 import java.lang.reflect.Field;
 
-public class BtaNumberProcessor {
+public class BtaNumberProcessor implements BtaProcessor{
     public void process(Object objectToProcess) throws IllegalAccessException {
         final Class clazz = objectToProcess.getClass();
         final Field[] fields = clazz.getDeclaredFields();
