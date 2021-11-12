@@ -43,7 +43,7 @@ public class ClassWork {
 
         circlePerimPrintConsumer.accept(new Circle());
 
-        Consumer<Circle> circleAreaPrintL = ...
+        //Consumer<Circle> circleAreaPrintL = ...
 
 
     }
