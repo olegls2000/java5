@@ -1,7 +1,11 @@
 package model;
 
+import annotation.BtaNumber;
+
 public abstract class AbstractWorker {
+    @BtaNumber(min = 0, max = 50_000)
     private int salary;
+
     private String firstName;
 
     public AbstractWorker(int salary, String firstName) {

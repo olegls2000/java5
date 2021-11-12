@@ -1,30 +1,22 @@
 package model;
 
+import annotation.BtaNumber;
 import lesson10.interfaces.WithPerimeter;
 
 public class Car implements WithPerimeter {
-    private static final int MIN_PRICE = 3_000;
-    private static final int MAX_PRICE = 100_000;
 
+    @BtaNumber(min = 3_000, max = 100_000)
     private int price;
+
+    @BtaNumber(min = 500, max = 3_000)
     private int weight;
 
     public Car(int price, int weight) {
-        priceCheck(price);
         this.price = price;
         this.weight = weight;
     }
 
-    private void priceCheck(int price) {
-        if (price < MIN_PRICE || price > MAX_PRICE) {
-            System.out.println("Car price (" + price + " EURO) is invalid! " +
-                    "Must be in a range [" + MIN_PRICE + "," + MAX_PRICE + "]");
-            throw new RuntimeException();
-        }
-    }
-
     public void setPrice(int price) {
-        priceCheck(price);
         this.price = price;
     }
 
@@ -32,9 +24,16 @@ public class Car implements WithPerimeter {
         return price;
     }
 
-
     @Override
     public int getPerimeter() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "price=" + price +
+                ", weight=" + weight +
+                '}';
     }
 }

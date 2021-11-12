@@ -4,7 +4,8 @@ import annotation.BtaNumber;
 
 import java.lang.reflect.Field;
 
-public class BtaNumberProcessor {
+public class BtaNumberProcessor implements BtaProcessor {
+    @Override
     public void process(Object objectToProcess) throws Exception {
         final Class clazz = objectToProcess.getClass();
         final Field[] fields = clazz.getDeclaredFields();
