@@ -1,5 +1,6 @@
 package lesson10;
 
+import lesson10.interfaces.WithPerimeter;
 import utils.BtaUtils;
 
 // INTERFEISY
@@ -19,10 +20,10 @@ public class ClassWork {
             int random = BtaUtils.getRandom(0, 4);
             switch (random) {
                 case 1:
-                    shapes[i] = new Circle();
+                    shapes[i] = (WithPerimeter) new Circle();
                     break;
                 case 2:
-                    shapes[i] = new Triangle();
+                    shapes[i] = (WithPerimeter) new Triangle();
                     break;
                 default:
                     shapes[i] = new Square();

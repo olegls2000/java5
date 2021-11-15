@@ -1,6 +1,6 @@
 package model;
 
-public class Slave extends AbstractWorker{
+public class Slave extends AbstractWorker {
 
     public Slave(int salary, String firstName) {
         super(salary, firstName);
@@ -11,7 +11,7 @@ public class Slave extends AbstractWorker{
 */
 
     public Slave() {
-        System.out.println( " Slave constructor");
+        System.out.println(" Slave constructor");
 
     }
 
@@ -20,6 +20,13 @@ public class Slave extends AbstractWorker{
         return "Slave{} " + super.toString();
     }
 
+    private void someSecretMethod() {
+        System.out.println(super.getFirstName() + " HELP ME !!!");
+    }
+
+    private void someGreatSecretMethod() {
+        System.out.println(super.getFirstName() + "  HELP ME !!!");
+    }
 
 
     /*   public Slave(int salary, String firstname) {

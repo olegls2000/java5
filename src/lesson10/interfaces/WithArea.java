@@ -1,6 +1,5 @@
-package lesson10;
+package lesson10.interfaces;
 
 public interface WithArea {
     double getArea();
-
 }

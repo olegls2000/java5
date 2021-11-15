@@ -1,5 +1,6 @@
 package lesson10;
 
+import lesson10.interfaces.WithPerimeter;
 import utils.BtaUtils;
 
 public class Square implements WithPerimeter {
@@ -10,28 +11,15 @@ public class Square implements WithPerimeter {
         this.side = BtaUtils.getRandom(3, 6);
     }
 
-//    @Override
-//    public String getCode() {
-//        return "SQUARE";
-//    }
-//
-//    @Override
-//    public long getId() {
-//        return 1L;
-//    }
-
     @Override
     public int getPerimeter() {
         return 4 * side;
     }
 
     @Override
-    public String getCode() {
-        return null;
-    }
-
-    @Override
-    public long getId() {
-        return 0;
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}' + "perimeter = " + getPerimeter();
     }
 }

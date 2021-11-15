@@ -33,7 +33,7 @@ public class ClassWork {
         } while (index2 > 10);
 
         //ARRAY
-        int[] array = new int[5];
+        Integer[] array = new Integer[5];
         int arrayLenght = array.length;
         ;
         System.out.println("array lenght" + arrayLenght);

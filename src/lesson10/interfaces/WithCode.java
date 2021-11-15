@@ -1,7 +1,5 @@
-package lesson10;
+package lesson10.interfaces;
 
 public interface WithCode {
     String getCode();
-
-
 }

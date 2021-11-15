@@ -1,5 +1,7 @@
 package lesson10;
 
+import lesson10.interfaces.WithArea;
+import lesson10.interfaces.WithPerimeter;
 import utils.BtaUtils;
 
 public class Circle implements WithPerimeter, WithArea {
@@ -8,8 +10,8 @@ public class Circle implements WithPerimeter, WithArea {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius + "perimeter" + getPerimeter() +
-                '}';
+                "radius=" + radius +
+                '}' + "perimeter = " + getPerimeter();
     }
 
     public Circle() {
@@ -19,16 +21,6 @@ public class Circle implements WithPerimeter, WithArea {
     @Override
     public int getPerimeter() {
         return (int) (2 * Math.PI * radius);
-    }
-
-    @Override
-    public String getCode() {
-        return null;
-    }
-
-    @Override
-    public long getId() {
-        return 0;
     }
 
     @Override

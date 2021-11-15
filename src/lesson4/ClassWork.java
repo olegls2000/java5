@@ -9,7 +9,7 @@ public class ClassWork {
 
             //int[] array = {1, 2, 3, 5};
 
-            int[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5);
+            Integer[] arrayGenerated = BtaUtils.generateArray(1, 1000, 5);
             BtaUtils.printArray(arrayGenerated);
 
             BtaUtils.getMaxValueIndex(arrayGenerated);

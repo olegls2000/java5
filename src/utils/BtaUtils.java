@@ -11,7 +11,7 @@ public class BtaUtils {
 
     public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
-    public static void printArray(int[] arrayToPrint) {
+    public static <T> void printArray(T[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
         for (int i = 0; i < arrayToPrint.length; i++) {
@@ -34,7 +34,7 @@ public class BtaUtils {
     }
 
     /* Max znachenie massiva */
-    public static int getMaxValueIndex(int[] getArray) {
+    public static int getMaxValueIndex(Integer[] getArray) {
         int indexMax = 0;
         for (int i = 1; i < getArray.length; i++) {
             if (getArray[i] > getArray[indexMax]) {
@@ -51,7 +51,7 @@ public class BtaUtils {
 
     /*  Minimalnoe znachenie massiva  */
 
-    public static int getMinValueIndex(int[] getArray) {
+    public static int getMinValueIndex(Integer[] getArray) {
         int indexMin = 0;
         for (int i = 1; i < getArray.length; i++) {
             if (getArray[i] < getArray[indexMin]) {
@@ -67,8 +67,8 @@ public class BtaUtils {
 
     /*  Sozdanie massiva */
 
-    public static int[] generateArray(int from, int to, int lenght) {
-        int[] result = new int[lenght];
+    public static Integer[] generateArray(int from, int to, int lenght) {
+        Integer[] result = new Integer[lenght];
         for (int i = 0; i < result.length; i++) {
             result[i] = getRandom(from, to);
         }
@@ -82,7 +82,7 @@ public class BtaUtils {
 
 
     /* swap   */
-    public static int[] swapElementsInArray(int index1, int index2, int[] array) {
+    public static Integer[] swapElementsInArray(int index1, int index2, Integer[] array) {
         int temp = array[index1];
         array[index1] = array[index2];
         array[index2] = temp;
@@ -90,8 +90,8 @@ public class BtaUtils {
     }
 
     public static double calculateDistance(Point a, Point b) {
-        double deltaXSqr = Math.pow(2, b.x - a.x);
-        double deltaYSqr = Math.pow(2, b.y - a.y);
+        double deltaXSqr = Math.pow(2, b.getX() - a.getX());
+        double deltaYSqr = Math.pow(2, b.getY() - a.getY());
         return Math.sqrt(deltaXSqr + deltaYSqr);
 
     }

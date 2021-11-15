@@ -2,10 +2,15 @@ package model;
 
 //Incapsulation !!!!
 
+import annotation.BtaNumber;
+
 public class Point {
 
-    public int x;
-    public int y;
+    @BtaNumber(min = 0, max = 99)
+    private int x;
+
+    @BtaNumber(min = -99, max = 0)
+    private int y;
 
     public Point(int x, int y) {
         this.x = x;
@@ -28,8 +33,6 @@ public class Point {
     public void setY(int y) {
         this.y = y;
     }
-
-
 
 
     @Override
