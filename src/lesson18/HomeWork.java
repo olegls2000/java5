@@ -33,6 +33,9 @@ public class HomeWork {
         private static void fullProcessing(Object o, Collection<BtaProcessor> processors) throws Exception {
             for (BtaProcessor processor : processors) {
                 processor.process(o);
+
+                long time1 = System.currentTimeMillis();
+
             }
         }
     }
