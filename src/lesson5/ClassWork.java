@@ -3,6 +3,8 @@ package lesson5;
 import model.Circle;
 import model.Employee;
 
+import java.util.Arrays;
+
 public class ClassWork {
     public static void main(String[] args) {
         Employee vasja = new Employee();
@@ -45,6 +47,10 @@ public class ClassWork {
             }
         }
         System.out.println("Biggest salary has: " + maxSalaryEmployee.firstName);
+
+        Arrays.stream(employees)
+                .max((employee1,employee2 ) -> (int) (employee1.getSalary() - employee2.getSalary()))
+                .ifPresent(mse -> System.out.println("Employee with max salary: " + mse));
 
         Employee yongestEmployee = employees[0];
         for (Employee emp : employees) {

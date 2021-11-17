@@ -17,7 +17,7 @@ public class HomeWork {
     static List<String> places = new ArrayList<>();
 
     // заполнение данными
-    public static List getPlaces() {
+    public static List<String> getPlaces() {
 
         // добавление страны и города
         places.add("Nepal, Kathmandu");
@@ -32,24 +32,24 @@ public class HomeWork {
 
     public static void main( String[] args ) {
 
-        List<String> myPlaces = getPlaces();
+        var myPlaces = getPlaces();
         System.out.println("Places from Nepal:");
 
         // Фильтрация городов
         myPlaces.stream()
-                .filter((p) -> p.startsWith("Nepal"))
-                .map((p) -> p.toUpperCase())
+                .filter(p -> p.startsWith("Nepal"))
+                .map(p -> p.toUpperCase())
                 .sorted()
-                .forEach((p) -> System.out.println(p));
+                .forEach(p -> System.out.println(p));
 
         // Объявление ссылки на параметризированный интерфейс
         // который принимает String
         // и присвоение ей лямбды
-        GenericInterface<String> reverse = (str) -> {
-
+        GenericInterface<String> reverse = str -> {
             String result = "";
-            for (int i = str.length()-1; i >= 0 ; i--)
+            for (int i = str.length()-1; i >= 0 ; i--) {
                 result += str.charAt(i);
+            }
             return result;
         };
 
@@ -58,11 +58,12 @@ public class HomeWork {
         // Объявление ссылки на параметризированный интерфейс
         // который принимает Integer
         // и присвоение ей лямбды
-        GenericInterface<Integer> factorial = (n) -> {
+        GenericInterface<Integer> factorial = n -> {
 
             int result = 1;
-            for (int i = 1; i <= n; i++)
-                result = i * result;
+            for (int i = 1; i <= n; i++) {
+                result *= i;
+            }
             return result;
         };
 

@@ -4,6 +4,10 @@ import lesson10.interfaces.WithArea;
 import lesson10.interfaces.WithPerimeter;
 import utils.BtaUtils;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Stream;
+
 public class ClassWork {
     public static void main(String[] args) {
 
@@ -14,28 +18,34 @@ public class ClassWork {
         Triangle triangle = new Triangle();
         Circle circle = new Circle();
 
-        WithPerimeter[] shapes = new WithPerimeter[9];
-        for (int i = 0; i < shapes.length; i++) {
-            int random = BtaUtils.getRandom(0, 3);
-            switch (random) {
+        //WithPerimeter[] shapes = new WithPerimeter[9];
+
+        WithPerimeter seed = new Circle();
+        WithPerimeter[] shapes = (WithPerimeter[]) Stream.iterate(seed, previous -> {
+            switch (BtaUtils.getRandom(0, 3)) {
                 case 1:
-                    shapes[i] = new Circle();
-                    break;
+                    return new Circle();
                 case 2:
-                    shapes[i] = new Triangle();
-                    break;
+                    return new Triangle();
                 default:
-                    shapes[i] = new Square();
+                    return new Square();
             }
-        }
+        }).limit(9).toArray();
+
         WithPerimeter maxPerimeterShape = shapes[0];
-        for (WithPerimeter shape: shapes) {
-            if(shape.getPerimeter() > maxPerimeterShape.getPerimeter()) {
+        for (WithPerimeter shape : shapes) {
+            if (shape.getPerimeter() > maxPerimeterShape.getPerimeter()) {
                 maxPerimeterShape = shape;
             }
         }
 
-        System.out.println("Max perim shape: " + maxPerimeterShape);
+        System.out.println("Max perimeter shape: " + maxPerimeterShape);
+
+
+        Arrays.stream(shapes)
+                .max(Comparator.comparingInt(WithPerimeter::getPerimeter))
+                .ifPresent(mps -> System.out.println("Max perimeter shape: " + mps));
+
 
         WithArea[] shapesArea = new WithArea[22];
         //TODO find max Area element...
@@ -53,8 +63,8 @@ public class ClassWork {
             }
         }
         WithArea maxAreaShape = shapesArea[0];
-        for (WithArea shape: shapesArea) {
-            if(shape.getArea() > maxAreaShape.getArea()) {
+        for (WithArea shape : shapesArea) {
+            if (shape.getArea() > maxAreaShape.getArea()) {
                 maxAreaShape = shape;
             }
         }

@@ -2,12 +2,14 @@ package utils;
 
 import model.*;
 
+import java.util.Arrays;
+
 public class BtaUtils {
 
     public static final int MY_LUCKY_NUMBER = 7;
     public static final Human JOE = new Human("Joe", "B", Gender.MAN);
 
-    public static <T>     void printArray(T[] arrayToPrint) {
+    public static <T> void printArray(T[] arrayToPrint) {
         System.out.println();
         System.out.print("[");
         for (int i = 0; i < arrayToPrint.length; i++) {
@@ -77,13 +79,15 @@ public class BtaUtils {
         return array;
     }
 
+    public static int getSum(int[] array) {
+        return Arrays.stream(array).sum();
+    }
+
     public static double calculateDistance(Point a, Point b) {
         double deltaXSqr = Math.pow(2, b.getX() - a.getX());
         double deltaYSqr = Math.pow(2, b.getY() - a.getY());
 
         return Math.sqrt(deltaXSqr + deltaYSqr);
-
-
 
     }
 }

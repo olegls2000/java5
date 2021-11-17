@@ -48,15 +48,16 @@ public class ClassWork {
         carsMap.entrySet();
 
         Set<Map.Entry<Manufacturer, Car>> entries = carsMap.entrySet();
-
         for (Map.Entry<Manufacturer, Car> entry: entries) {
             Manufacturer key = entry.getKey();
             Car value = entry.getValue();
-
             System.out.println("Entry - key: " + entry.getKey());
             System.out.println("Entry - value : " + entry.getValue());
         }
-
+        carsMap.entrySet().stream().forEach(es -> {
+            System.out.println("Entry-key: " + es.getKey());
+            System.out.println("Entry-value: " + es.getValue());
+        });
 
     }
 }

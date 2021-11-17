@@ -8,6 +8,14 @@ public class Employee {
     public String firstName;
     public String lastName;
 
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
     public Employee() {
         System.out.println("Default Constructor");
     }
