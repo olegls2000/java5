@@ -40,8 +40,9 @@ public class Main5 {
                 maxSalaryEmployee = emp;
             }
         }
-
         System.out.println("Biggest salary has " + maxSalaryEmployee.getFirstName());
+
+
 
         Circle[] circles = new Circle[100];
         for (int i = 0; i < circles.length; i++) {

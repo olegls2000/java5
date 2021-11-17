@@ -2,6 +2,8 @@ package utils;
 
 import model.Point;
 
+import java.util.Arrays;
+
 public class BtaUtils {
 
 
@@ -60,6 +62,7 @@ public class BtaUtils {
         return iMin;
     }
 
+    //@Deprecated
     public static Integer[] swapElementsInaArray(int index1, int index2, Integer[] array) {
         int vremennaja = array[index1];
         array[index1] = array[index2];
@@ -76,13 +79,8 @@ public class BtaUtils {
         return array;
     }
 
-
     public static int getSumm(int[] array) {
-        int summ = 0;
-        for (int i = 0; i < array.length; i++) {
-            summ += array[i];
-        }
-        return summ;
+        return Arrays.stream(array).sum();
     }
 
     public static double calculateDistance(Point a, Point b) {

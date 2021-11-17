@@ -46,14 +46,21 @@ public class ClassWork {
 
         Car value = carsMap.get(Manufacturer.HONDA);
         boolean isContain = carsMap.containsValue(car3);
-        Set<Map.Entry<Manufacturer, Car>> entries = carsMap.entrySet();
 
+
+        Set<Map.Entry<Manufacturer, Car>> entries = carsMap.entrySet();
         for (Map.Entry<Manufacturer, Car> entry : entries) {
             Manufacturer key = entry.getKey();
             Car value1 = entry.getValue();
             System.out.println("Entry - key: " + entry.getKey());
             System.out.println("Entry - value: " + entry.getValue());
         }
+
+        carsMap.entrySet().stream().forEach(es -> {
+            System.out.println("Entry - key: " + es.getKey());
+            System.out.println("Entry - value: " + es.getValue());
+        });
+
 
         Map<Integer, Student> mapStudent = new TreeMap<>();
         Student student1 = new Student(18, "Ivan");
