@@ -1,10 +1,10 @@
 package org.bta.lesson.lesson2;
 
 
+import org.bta.lesson.utils.BtaUtils;
 
 public class ClassWork {
 
-    private static Object BtaUtils;
 
     public static void main(String[] args) {
         if (55 != 66) {
@@ -98,9 +98,5 @@ public class ClassWork {
         int sum = a + b;
         System.out.println("log: sum = " + sum);
         return sum;
-    }
-
-    public static void setBtaUtils(Object btaUtils) {
-        BtaUtils = btaUtils;
     }
 }
