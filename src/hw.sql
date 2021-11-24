@@ -1,25 +1,27 @@
 CREATE TABLE country
 (
-	Id SERIAL PRIMARY KEY,
-	Name CHARACTER VARYING(30),
-	Code INTEGER,
-	Discription CHARACTER VARYING(30)
+	id SERIAL PRIMARY KEY,
+	name CHARACTER VARYING(30),
+	code INTEGER,
+	discription CHARACTER VARYING(30)
 );
 
 CREATE TABLE city
 (
-	Id SERIAL PRIMARY KEY,
-	Name CHARACTER VARYING(30),
-	Code INTEGER,
-	Id uuid,
-	Discription CHARACTER VARYING(30)
+	id SERIAL PRIMARY KEY,
+	name CHARACTER VARYING(30),
+	code INTEGER,
+	discription CHARACTER VARYING(30),
+	country_id int not null,
+	constraint FK_COUNTRY foreign KEY (country_id) REFERENCES country (id)
 );
 
-CREATE TABLE Citizen
+CREATE TABLE citizen
 (
-	Id SERIAL PRIMARY KEY,
-	FirstName CHARACTER VARYING(30),
-	LastName CHARACTER VARYING(30),
-	Birthday INTEGER,
-	City_id uuid
+	id SERIAL PRIMARY KEY,
+	firstName CHARACTER VARYING(30),
+	lastName CHARACTER VARYING(30),
+	birth_day INTEGER,
+	city_id int,
+	constraint FK_CITY foreign KEY (city_id) REFERENCES city (id)
 );
