@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_USER: um
+      POSTGRES_PASSWORD: um123
+      POSTGRES_DB: um
+    ports:
+      - 5432:5432
