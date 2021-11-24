@@ -1,6 +1,6 @@
 package org.bta.lesson.Lesson10.Interfaces;
 
-import model.Car;
+import org.bta.lesson.model.Car;
 
 public interface AutoStore {
 
