@@ -9,8 +9,8 @@ import java.lang.reflect.Field;
 public class BtaStartWithProcessor implements BtaProcessor {
     @Override
     public void process(Object objectToProcess) throws Exception {
-        final var clazz = objectToProcess.getClass();
-        final var fields = clazz.getDeclaredFields();
+        final Class clazz = objectToProcess.getClass();
+        final Field[] fields = clazz.getDeclaredFields();
         for (Field field : fields) {
             field.setAccessible(true);
             if (!field.isAnnotationPresent(BtaStartWith.class)) {
@@ -19,10 +19,10 @@ public class BtaStartWithProcessor implements BtaProcessor {
             if (field.getType() != String.class) {
                 throw new RuntimeException("Annotation placed on incompatible type");
             }
-            final var annotation = field.getAnnotation(BtaStartWith.class);
-            final var startChar = annotation.value();
+            final BtaStartWith annotation = field.getAnnotation(BtaStartWith.class);
+            final String startChar = annotation.value();
             Object rawValue = field.get(objectToProcess);
-            final var value = (String) rawValue;
+            final String value = (String) rawValue;
             if (!value.startsWith(startChar)) {
                 throw new RuntimeException("Invalid value, must start with " + startChar);
             }

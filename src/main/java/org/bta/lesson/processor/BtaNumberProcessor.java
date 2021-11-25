@@ -17,8 +17,8 @@ public class BtaNumberProcessor implements BtaProcessor {
                 continue;
             }
             final BtaNumber annotation = field.getAnnotation(BtaNumber.class);
-            final var max = annotation.max();
-            final var min = annotation.min();
+            final int max = annotation.max();
+            final int min = annotation.min();
             Object rawValue = field.get(objectToProcess);
             int value = (int) rawValue;
             if (value < min || value > max) {

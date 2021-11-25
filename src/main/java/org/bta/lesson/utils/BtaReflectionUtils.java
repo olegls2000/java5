@@ -31,10 +31,10 @@ public class BtaReflectionUtils {
     }
 
     public static void invokeMethod(final Object target, final String sign) throws Exception {
-        final var clazz = target.getClass();
+        final Class clazz = target.getClass();
         Method secretMethod = null;
         for (Method method : clazz.getDeclaredMethods()) {
-            final var methodName = method.getName();
+            final String methodName = method.getName();
             if (methodName.toUpperCase().contains(sign.toUpperCase())) {
                 secretMethod = method;
             }

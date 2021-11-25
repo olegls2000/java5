@@ -55,7 +55,20 @@ select * from country;
 select * from city;
 select * from citizen;
 
-select *
+select ci.name
 from city ci
 join citizen cz on cz.city_id = ci.id
+where cz.firsTname = 'Kim'
 ;
+
+select
+--co.name
+*
+from country co
+join city ct
+on ct.country_id = co.id
+--where ct.name = 'Helsinki'
+;
+
+
+-- print out Country name where located Helsiki

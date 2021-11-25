@@ -46,6 +46,6 @@ public class ClassWork {
         String[] words = splitExample.split(" ");
 
         System.out.println(words.length);
-        splitExample.isBlank();
+        //splitExample.isBlank();
     }
 }

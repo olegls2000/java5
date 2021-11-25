@@ -37,7 +37,7 @@ public class ClassWork {
                 d -> d.getSalary() > 100_000);
         System.out.println(filtered);
 
-        var filteredByName = filterByPredicate(directorList,
+         filterByPredicate(directorList,
                 d -> d.getFirstName().startsWith("N"));
 
         List<Circle> circles = Arrays.asList(new Circle(), new Circle());

@@ -14,12 +14,12 @@ import java.util.*;
 
 public class HomeWork {
     public static void main(String[] args) throws Exception {
-        final var director = new Director();
+        final Director director = new Director();
         director.setDepartment("Absolute");
 
-        final var startWithProcessor = new BtaStartWithProcessor();
-        final var numberProcessor = new BtaNumberProcessor();
-        final var processors = new ArrayList<BtaProcessor>();
+        final BtaStartWithProcessor startWithProcessor = new BtaStartWithProcessor();
+        final BtaNumberProcessor numberProcessor = new BtaNumberProcessor();
+        final ArrayList<BtaProcessor> processors = new ArrayList<BtaProcessor>();
         processors.add(startWithProcessor);
         processors.add(numberProcessor);
 
