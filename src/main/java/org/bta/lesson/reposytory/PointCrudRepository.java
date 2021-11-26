@@ -33,11 +33,12 @@ public class PointCrudRepository implements CrudRepository {
 
     @Override
     public Point delete(Point item) {
-        final String sql = "delete from point where id=" + item.getId() + ")";
+        final String sql = "delete from point where id=?";
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(sql);
         ) {
-
+            statement.setLong(0, item.getId());
+            statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }
