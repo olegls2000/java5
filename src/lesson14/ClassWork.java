@@ -37,6 +37,7 @@ public class ClassWork {
         Car car2 = new Car(Manufacturer.BMW);
         Car car3 = new Car(Manufacturer.HONDA);
         Car car4 = new Car(Manufacturer.HONDA);
+
         Map<Manufacturer, Car> carsMap = new HashMap<>(4);
         carsMap.put(car1.getManufacturer(), car1);
         carsMap.put(car2.getManufacturer(), car2);

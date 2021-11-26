@@ -4,6 +4,8 @@ import model.Human;
 import model.Gender;
 import model.Point;
 
+import java.util.Arrays;
+
 public class BtaUtils {
 
     // КОНСТАНТЫ
@@ -105,6 +107,9 @@ public class BtaUtils {
         return result;
     }
 
+    public static int getSumm(int[] array) {
+    return Arrays.stream(array).sum();
+    }
 
     public static double calculateDistance(Point a, Point b) {
         double deltaXSqr = Math.pow(2, b.getX() - a.getX()); // возводим в квадрат

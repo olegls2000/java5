@@ -3,6 +3,8 @@ package lesson5;
 import model.Circle;
 import model.Employee;
 
+import java.util.Arrays;
+
 //TODO rename
 public class ClassWork {
     public static void main(String[] args) {
@@ -40,6 +42,12 @@ public class ClassWork {
 
 // у кого самая большая зарплата
 
+
+
+
+
+
+
         Employee[] employees = {joe, vladimir}; // у кого самая большая зарплата
         Employee maxSalaryEmployee = employees[0];
         for (Employee emp : employees) {
@@ -50,6 +58,14 @@ public class ClassWork {
             }
         }
         System.out.println("Biggest Salary has " + maxSalaryEmployee.getFirstName());
+
+
+        Arrays.stream(employees)
+                .max((employee1, employee2) -> (int) (joe.getSalary() - vladimir.getSalary()))
+                .ifPresent(mse -> System.out.println("Max salary is: " + mse));
+
+
+
 
 // создаём круги из вкладки Circle
 
