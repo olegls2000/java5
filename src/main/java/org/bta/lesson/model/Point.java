@@ -5,6 +5,8 @@ package org.bta.lesson.model;
 import org.bta.lesson.annotation.BtaNumber;
 
 public class Point {
+    private Long id;
+
     @BtaNumber(min = 0, max = 99)
     private int x;
 
@@ -51,5 +53,22 @@ public class Point {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "id=" + id +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
