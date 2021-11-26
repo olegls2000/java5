@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class PointCrudRepository implements CrudRepository {
+public class PointCrudRepository implements CrudRepository<Point> {
 
     private static final String URL = "jdbc:postgresql://pgctcd1-primary.db.int.kn:5432/um_uat_db";
     private static final String USERNAME = "um_uat";
