@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.bta</groupId>
-    <artifactId>lessons -java5</artifactId>
+    <artifactId>lessons-java5</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
@@ -20,60 +19,12 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.6.1.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.1</version>
+        </dependency>
     </dependencies>
 
-
-    <profiles>
-        <profile>
-            <id>scanner</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.jolira</groupId>
-                        <artifactId>onejar-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <configuration>
-                                    <mainClass>org.bta.java5.MainScanner</mainClass>
-                                    <attachToBuild>true</attachToBuild>
-                                    <filename>
-                                        executable.${project.packaging}
-                                    </filename>
-                                </configuration>
-                                <goals>
-                                    <goal>one-jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>simple</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.jolira</groupId>
-                        <artifactId>onejar-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <configuration>
-                                    <mainClass>org.bta.java5.MainScanner</mainClass>
-                                    <attachToBuild>true</attachToBuild>
-                                    <filename>
-                                        executable.${project.packaging}
-                                    </filename>
-                                </configuration>
-                                <goals>
-                                    <goal>one-jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
