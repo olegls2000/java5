@@ -1,0 +1,77 @@
+Create sequence point_seq;
+
+create table POINT (
+	id int PRIMARY KEY,
+	x int NOT NULL,
+	y int NOT NULL
+);
+
+insert into POINT (id, x, y) values (nextval('point_seq'),4,4);
+insert into POINT (id, x, y) values (nextval('point_seq'),5,5);
+insert into POINT (id, x, y) values (nextval('point_seq'),6,6);
+insert into POINT (id, x, y) values (nextval('point_seq'),-4,-4);
+insert into POINT (id, x, y) values (nextval('point_seq'),-5,-5);
+insert into POINT (id, x, y) values (nextval('point_seq'),-6,-6);
+
+
+drop table TRIANGLE;
+
+
+create table TRIANGLE (
+	id serial PRIMARY KEY,
+	a_id int NOT NULL,
+	b_id int NOT NULL,
+	c_id int NOT NULL,
+	CONSTRAINT FK_POINT_A foreign KEY (a_id) REFERENCES POINT(id),
+	CONSTRAINT FK_POINT_B foreign KEY (b_id) REFERENCES POINT(id),
+	CONSTRAINT FK_POINT_C foreign KEY (c_id) REFERENCES POINT(id)
+);
+insert into TRIANGLE ( a_id, b_id, c_id) values (1, 2, 3);
+insert into TRIANGLE ( a_id, b_id, c_id) values (4, 5, 6);
+
+SELECT * from POINT,TRIANGLE;
+SELECT * from TRIANGLE;
+SELECT * from POINT;
+
+SELECT tr.id, tr.a_id, pt.* from TRIANGLE tr
+join POINT pt on tr.a_id = pt.id
+where pt.x<0 and pt.y<0;
+drop table CITY;
+drop table CITYZEN;
+drop table COUNTRY;
+create table COUNTRY (
+	id serial PRIMARY KEY,
+	nameCountry varchar NOT NULL,
+	code int NOT NULL,
+	description varchar NOT NULL
+);
+create table CITY (
+	id serial PRIMARY KEY,
+	cityName varchar NOT NULL,
+	code int NOT NULL,
+	description varchar NOT NULL,
+	country_id int NOT NULL
+);
+create table CITYZEN (
+	id serial PRIMARY KEY,
+	firstName varchar NOT NULL,
+	lastName varchar NOT NULL,
+	birthday varchar NOT NULL,
+	city_id int NOT NULL
+);
+drop table CITY;
+insert into COUNTRY (nameCountry, code, description) values ('Estonia', 372, 'This is first description');
+insert into COUNTRY (nameCountry, code, description) values ('Latvia', 371, 'This is second description');
+insert into COUNTRY (nameCountry, code, description) values ('Finlandia', 355, 'This is third description');
+
+select * from COUNTRY
+
+insert into CITY (cityName, code, description, country_id) values ('Tallinn', 372, 'This is first description', 1);
+insert into CITY (cityName, code, description, country_id) values ('Riga', 371, 'This is second description', 2);
+insert into CITY (cityName, code, description, country_id) values ('Helsinki', 355, 'This is third description', 3);
+
+insert into POINT (id, x, y) values (nextval('point_seq'),5,5);
+insert into POINT (id, x, y) values (nextval('point_seq'),6,6);
+insert into POINT (id, x, y) values (nextval('point_seq'),-4,-4);
+insert into POINT (id, x, y) values (nextval('point_seq'),-5,-5);
+insert into POINT (id, x, y) values (nextval('point_seq'),-6,-6);
