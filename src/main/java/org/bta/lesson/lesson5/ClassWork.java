@@ -1,7 +1,7 @@
 package org.bta.lesson.lesson5;
 
 import org.bta.lesson.model.Circle;
-import org.bta.lesson.Employee;
+import org.bta.lesson.model.Employee;
 
 import java.util.Arrays;
 

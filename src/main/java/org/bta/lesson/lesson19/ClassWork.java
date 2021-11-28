@@ -3,7 +3,6 @@ package org.bta.lesson.lesson19;
 import org.bta.lesson.lesson10.Circle;
 import org.bta.lesson.lesson10.Triangle;
 import org.bta.lesson.lesson10.homework.Car;
-import org.bta.lesson.model.Car;
 import org.bta.lesson.model.Rectangle;
 import org.bta.lesson.utils.BtaUtils;
 
@@ -30,7 +29,7 @@ public class ClassWork {
 
         print(triangleSupplierLambda, 7);
         print(() -> new Circle(), 3);
-        print(() -> new Car(getRandom(3000, 700000), getRandom(1000, 3000)), 3);
+        //print(() -> new Car(getRandom(3000, 700000), getRandom(1000, 3000)), 3);
 
         Consumer<Circle> circlePerimPrintConsumer = new Consumer<Circle>() {
             @Override

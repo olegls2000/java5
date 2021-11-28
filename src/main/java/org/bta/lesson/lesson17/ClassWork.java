@@ -5,7 +5,7 @@ import org.bta.lesson.lesson10.Triangle;
 import java.lang.reflect.Constructor;
 import java.util.*;
 
-import static utils.BtaReflectionUtils.getDefaultConstructorOrThrow;
+import static org.bta.lesson.utils.BtaReflectionUtils.getDefaultConstructorOrThrow;
 
 
 public class ClassWork {

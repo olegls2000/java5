@@ -1,6 +1,6 @@
 package org.bta.lesson.lesson10.homework;
 
-public class VehoAutoSalon implements lesson10.homework.AutoSalonApi {
+public class VehoAutoSalon implements AutoSalonApi {
 
     private static final int PARKING_PLACES = 8;
     private long balance;
