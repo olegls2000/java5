@@ -32,6 +32,17 @@ create table citizen
 	constraint FK_CITY foreign key (city_id) references city (id)
 );
 
+create table point
+(
+	id serial primary key,
+	x int not null,
+	y int not null
+);
+
+insert into POINT ( x, y) values ( -4, -4);
+insert into POINT (x, y) values ( -5, -5);
+insert into POINT (x, y) values ( -6, -6);
+
 insert into country (code, countryName, discription) values (22, 'Estonia', 'Baltic Country');
 insert into country (code, countryName, discription) values (33, 'Finland', 'Nordic Country');
 insert into country (code, countryName, discription) values (44, 'Malaisa', 'Asia');
