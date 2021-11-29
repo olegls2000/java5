@@ -77,8 +77,7 @@ public class PointCrudRepository implements CrudRepository {
     }
 
     @Override
-    public Triangle create(Triangle item) {
-        return null;
+    public void create(Triangle item) {
     }
 
     @Override

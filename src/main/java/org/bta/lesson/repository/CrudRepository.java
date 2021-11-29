@@ -3,6 +3,7 @@ package org.bta.lesson.repository;
 import org.bta.lesson.model.Point;
 import org.bta.lesson.model.Triangle;
 
+import java.sql.SQLException;
 import java.util.Collection;
 
 public interface CrudRepository {
@@ -12,7 +13,7 @@ public interface CrudRepository {
     Collection<Point> selectAll();
     Collection findOne(Long id);
 
-    Triangle create(Triangle item);
+    void create(Triangle item) throws SQLException;
     Triangle update (Triangle item);
     Triangle delete (Triangle item);
     Collection<Triangle> selectAllTriangle();
