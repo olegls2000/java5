@@ -9,58 +9,81 @@ import java.util.Collection;
 
 //CRUD - Create Update Delete - Определение абревиатуры
 
-public class PointCrudRepository implements CrudRepository {
+public class PointCrudRepository implements CrudRepository<Point> {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "Sanek229";
 
-    public PointCrudRepository() {
-    }
-
-
     @Override
     public Point create(Point item) {
-        final String sql = "insert into point (x,y) values (" + item.getX() + ", " + +item.getY() + ")";
-        Point result = null;
+
+        final String sql = "insert into point (x, y) values (?, ?)";
+        final String sqlSelect = "select id from point where x =? and y =?";
+        final int x = item.getX();
+        final int y = item.getY();
+
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
+             PreparedStatement statement = connection.prepareStatement(sql);
+             PreparedStatement statementSelect = connection.prepareStatement(sqlSelect);
+        ) {
 
-            while (resultSet.next()) {
-                Point point = new Point();
-                point.setX(resultSet.getInt("x"));
-                point.setY(resultSet.getInt("y"));
+
+            statement.setInt(1, item.getX());
+            statement.setInt(2, item.getY());
+            int affectedRow = statement.executeUpdate();
+            if(affectedRow != 1) {
+                throw new RuntimeException("Insert failed!!!");
             }
-
+            statementSelect.setInt(1, item.getX());
+            statementSelect.setInt(2, item.getY());
+            ResultSet rs = statementSelect.executeQuery();
+            if(rs.next()) {
+                final Long id = rs.getLong("id");
+                item.setId(id);
+            } else {
+                throw new RuntimeException("Insert failed!!!");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-
         }
-        return null;
+
+        return item;
     }
 
     @Override
-    public Point update(Point item) {
-        return null;
+    public void update(Point item) {
+
     }
 
     @Override
-    public Point delete(Point item) {
-        return null;
+    public void delete(Point item) {
+
+        final String sql = "delete from point where id=?";
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+             PreparedStatement statement = connection.prepareStatement(sql);
+        ) {
+            statement.setLong(0, item.getId());
+            statement.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
     public Collection<Point> selectAll() {
+
         final Collection<Point> result = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("select * from country")) {
+             ResultSet resultSet = statement.executeQuery("select * from point")) {
 
             while (resultSet.next()) {
                 Point point = new Point();
                 point.setX(resultSet.getInt("x"));
                 point.setY(resultSet.getInt("y"));
+                point.setId(resultSet.getLong("id"));
                 result.add(point);
             }
 
@@ -68,35 +91,11 @@ public class PointCrudRepository implements CrudRepository {
             e.printStackTrace();
 
         }
-        return null;
+        return result;
     }
 
     @Override
-    public Collection findOne(Long id) {
-        return null;
-    }
-
-    @Override
-    public void create(Triangle item) {
-    }
-
-    @Override
-    public Triangle update(Triangle item) {
-        return null;
-    }
-
-    @Override
-    public Triangle delete(Triangle item) {
-        return null;
-    }
-
-    @Override
-    public Collection<Triangle> selectAllTriangle() {
-        return null;
-    }
-
-    @Override
-    public Collection findOne1(Long id) {
+    public Point findOne(Long id) {
         return null;
     }
 }
