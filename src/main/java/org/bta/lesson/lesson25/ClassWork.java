@@ -5,11 +5,18 @@ import org.bta.lesson.model.Triangle;
 import org.bta.lesson.repository.CrudRepository;
 import org.bta.lesson.repository.PointCrudRepository;
 import org.bta.lesson.repository.TriangleCrudRepository;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClassWork {
     public static void main(String[] args) {
-        CrudRepository<Point> pointRepository = new PointCrudRepository();
-        CrudRepository<Triangle> triangleRepository = new TriangleCrudRepository();
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+
+        CrudRepository<Point> pointRepository = (CrudRepository<Point>) context.getBean("pointRepository");
+        CrudRepository<Point> pointRepository2 = context.getBean(PointCrudRepository.class);
+        CrudRepository<Triangle> triangleRepository = context.getBean(TriangleCrudRepository.class);
+        CrudRepository<Triangle> triangleRepository2 = context.getBean(TriangleCrudRepository.class);
 
         Point a = new Point(53, 99);
         Point b = new Point(55, 91);

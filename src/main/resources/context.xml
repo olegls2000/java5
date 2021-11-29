@@ -5,7 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/beans ">
 
-
-
+    <bean id="pointRepository"
+          scope="singleton"
+          class="org.bta.lesson.repository.PointCrudRepository">
+    </bean>
+    <bean id="triangleRepository"
+          scope="prototype"
+          class="org.bta.lesson.repository.TriangleCrudRepository">
+    </bean>
 
 </beans>
