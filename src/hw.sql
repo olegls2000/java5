@@ -41,6 +41,15 @@ create table point
 	y int not null
 );
 
+create table triangle
+(
+	id serial primary key,
+	a_id int not null references point(id),
+	b_id int not null references point(id),
+	c_id int not null references point(id),
+	unique (a_id, b_id, c_id)
+);
+
 insert into POINT ( x, y) values ( -4, -4);
 insert into POINT (x, y) values ( -5, -5);
 insert into POINT (x, y) values ( -6, -6);

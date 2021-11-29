@@ -4,10 +4,10 @@ import org.bta.lesson.model.Point;
 
 import java.util.Collection;
 
-public interface CrudRepository {
-    void create(Point item);
-    Point update(Point item);
-    Point delete(Point item);
+public interface CrudRepository<T> {
+    T create(T item);
+    void update(T item);
+    void delete(T item);
     Collection<Point> selectAll();
-    Point findOne(Long id);
+    T findOne(Long id);
 }

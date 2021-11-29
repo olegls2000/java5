@@ -1,6 +1,7 @@
 package org.bta.lesson.lesson25;
 
 import org.bta.lesson.model.Point;
+import org.bta.lesson.model.Triangle;
 import org.bta.lesson.reposytory.CrudRepository;
 import org.bta.lesson.reposytory.PointCrudRepository;
 
@@ -9,7 +10,16 @@ public class ClassWork {
         CrudRepository pointRepository = new PointCrudRepository();
         System.out.println(pointRepository.selectAll());
 
-        pointRepository.create(new Point(22,33));
+        Point a = new Point(88, 99);
+        Point b = new Point(82, 91);
+        Point c = new Point(81, 44);
+
+        pointRepository.create(a);
+        pointRepository.create(b);
+        pointRepository.create(c);
+
+
         System.out.println(pointRepository.selectAll());
+        Triangle triangle = new Triangle(a, b, c);
     }
 }

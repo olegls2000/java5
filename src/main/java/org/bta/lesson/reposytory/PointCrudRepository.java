@@ -6,33 +6,54 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class PointCrudRepository implements CrudRepository {
+public class PointCrudRepository implements CrudRepository<Point> {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USERNAME = "macbook";
     private static final String PASSWORD = "Gettherefast1";
 
     @Override
-    public void create(Point item) {
+    public Point create(Point item) {
 
-        final String sql = "insert into point ( x, y) values (" + item.getX() + ", " + item.getY() + ")";
+        final String sql = "insert into point (x, y) values (?, ?)";
+        final String sqlSelect = "select id from point where x =? and y =?";
+        final int x = item.getX();
+        final int y = item.getY();
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(sql);
+             PreparedStatement statementSelect = connection.prepareStatement(sqlSelect);
         ) {
 
+
+            statement.setInt(1, item.getX());
+            statement.setInt(2, item.getY());
+            int affectedRow = statement.executeUpdate();
+            if(affectedRow != 1) {
+                throw new RuntimeException("Insert failed!!!");
+            }
+            statementSelect.setInt(1, item.getX());
+            statementSelect.setInt(2, item.getY());
+            ResultSet rs = statementSelect.executeQuery();
+            if(rs.next()) {
+                final Long id = rs.getLong("id");
+                item.setId(id);
+            } else {
+                throw new RuntimeException("Insert failed!!!");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-
         }
+
+        return item;
     }
 
     @Override
-    public Point update(Point item) {
-        return null;
+    public void update(Point item) {
+
     }
 
     @Override
-    public Point delete(Point item) {
+    public void delete(Point item) {
         final String sql = "delete from point where id=?";
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(sql);
@@ -42,7 +63,6 @@ public class PointCrudRepository implements CrudRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     @Override

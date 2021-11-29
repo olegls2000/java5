@@ -5,6 +5,7 @@ import org.bta.lesson.utils.BtaUtils;
 
 public class Triangle {
 
+    private Long id;
     private Point a;
     private Point b;
     private Point c;
@@ -16,6 +17,14 @@ public class Triangle {
         this.a = one;
         this.b = two;
         this.c = three;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Point getA() {
@@ -59,5 +68,7 @@ public class Triangle {
             System.out.println("Triangle impossible!");
             throw new InvalidTriangleException("Triangle impossible!");
         }
+
     }
 }
+
