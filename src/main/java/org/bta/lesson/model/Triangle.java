@@ -62,12 +62,12 @@ public class Triangle {
     }
 
     private void pointOneLineCheck(Point one, Point two, Point three) throws InvalidTriangleException {
-        double lefPart = (c.getY() - a.getY()) / (two.getY() - one.getY());
+   /*     double lefPart = (c.getY() - a.getY()) / (two.getY() - one.getY());
         double rightPart = (c.getX() - a.getX()) / (two.getX() - one.getX());
         if (lefPart == rightPart) {
             System.out.println("Triangle impossible!");
             throw new InvalidTriangleException("Triangle impossible!");
-        }
+        }*/
 
     }
 }

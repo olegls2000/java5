@@ -40,7 +40,7 @@ create table point
 	x int not null,
 	y int not null
 );
-
+drop table triangle;
 create table triangle
 (
 	id serial primary key,
@@ -86,6 +86,8 @@ insert into citizen (firstName, lastName, birth_day, city_id) values
 select * from citizen;
 select * from country;
 select * from city;
+select * from triangle;
+select * from point;
 
 select *
 from city ci

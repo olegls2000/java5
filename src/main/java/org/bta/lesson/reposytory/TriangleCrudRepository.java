@@ -3,13 +3,10 @@ package org.bta.lesson.reposytory;
 import org.bta.lesson.model.Point;
 import org.bta.lesson.model.Triangle;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Collection;
 
-public class TriangleRepository implements CrudRepository<Triangle>{
+public class TriangleCrudRepository implements CrudRepository<Triangle>{
 
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
     private static final String USERNAME = "macbook";
@@ -27,6 +24,24 @@ public class TriangleRepository implements CrudRepository<Triangle>{
              PreparedStatement statement = connection.prepareStatement(sqlInsert);
              PreparedStatement statementSelect = connection.prepareStatement(sqlSelect);
         ) {
+
+            statement.setLong(1, a_id);
+            statement.setLong(2, b_id);
+            statement.setLong(3, c_id);
+            int affectedRow = statement.executeUpdate();
+            if(affectedRow != 1) {
+                throw new RuntimeException("Insert failed!!!");
+            }
+            statementSelect.setLong(1, a_id);
+            statementSelect.setLong(2, b_id);
+            statementSelect.setLong(3, c_id);
+            ResultSet rs = statementSelect.executeQuery();
+            if(rs.next()) {
+                final Long id = rs.getLong("id");
+                item.setId(id);
+            } else {
+                throw new RuntimeException("Insert failed!!!");
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
