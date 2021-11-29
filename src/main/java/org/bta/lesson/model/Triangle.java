@@ -4,6 +4,7 @@ package org.bta.lesson.model;
 import org.bta.lesson.utils.BtaUtils;
 
 public class Triangle {
+    private Long id;
     private Point a;
     private Point b;
     private Point c;
@@ -13,6 +14,14 @@ public class Triangle {
         this.a = one;
         this.b = two;
         this.c = three;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Point getA() {
@@ -79,7 +88,7 @@ public class Triangle {
 
 
 
-    public static class InvalidTriangleException extends Exception {
+    public static class InvalidTriangleException extends RuntimeException {
         public InvalidTriangleException(String message) {
             super(message);
         }

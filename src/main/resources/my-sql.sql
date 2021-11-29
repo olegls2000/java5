@@ -8,7 +8,7 @@ create table country
 	name CHARACTER VARYING(30),
 	code integer,
 	discription character varying(30),
-	UNIQUE (name)
+	unique (name)
 );
 
 create table city
@@ -19,7 +19,7 @@ create table city
 	discription character varying(30),
 	country_id int not null,
 	constraint FK_COUNTRY foreign key (country_id) references country (id),
-	UNIQUE (name, country_id)
+	unique (name, country_id)
 );
 
 create table citizen
@@ -39,11 +39,18 @@ create table point
 	y int not null
 );
 
+create table triangle
+(
+	id serial primary key,
+	a_id int not null references point(id),
+	b_id int not null references point(id),
+	c_id int not null references point(id),
+	unique (a_id, b_id, c_id)
+);
+
 insert into POINT ( x, y) values ( -4, -4);
 insert into POINT (x, y) values ( -5, -5);
 insert into POINT (x, y) values ( -6, -6);
-
-
 
 
 insert into country (code, name, discription) values (22, 'Estonia', 'Baltic Country');

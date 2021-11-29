@@ -5,9 +5,9 @@ import org.bta.lesson.model.Point;
 import java.util.Collection;
 
 public interface CrudRepository<T> {
-    void create(Point item);
-    T update(T item);
-    T delete(T item);
+    T create(T item);
+    void update(T item);
+    void delete(T item);
     Collection<T> selectAll();
     T findOne(Long id);
 }

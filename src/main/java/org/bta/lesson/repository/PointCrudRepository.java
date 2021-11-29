@@ -5,34 +5,53 @@ import org.bta.lesson.model.Point;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.ArrayBlockingQueue;
 
 public class PointCrudRepository implements CrudRepository<Point> {
 
-    private static final String URL = "jdbc:postgresql://pgctcd1-primary.db.int.kn:5432/um_uat_db";
-    private static final String USERNAME = "um_uat";
-    private static final String PASSWORD = "ApVPQtdQeamGQ9Z";
-
+    private static final String URL = "jdbc:postgresql://localhost:5433/um";
+    private static final String USERNAME = "um";
+    private static final String PASSWORD = "um123";
 
     @Override
-    public void create(Point item) {
-        final String sql = "insert into point (x, y) values (" + item.getX() + ",  " + item.getY() + ")";
+    public Point create(Point item) {
+        final String sql = "insert into point (x, y) values (?,  ?)";
+        final String sqlSelect = "select id from point where x=? and y=?";
+        final int x = item.getX();
+        final int y = item.getY();
+
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             Statement statement = connection.createStatement();
+             PreparedStatement statement = connection.prepareStatement(sql);
+             PreparedStatement statementSelect = connection.prepareStatement(sqlSelect);
         ) {
-            statement.executeUpdate(sql);
+            statement.setInt(1, x);
+            statement.setInt(2, y);
+            int affectedRow = statement.executeUpdate();
+            if (affectedRow != 1) {
+                throw new RuntimeException("Insert Failed!!!");
+            }
+            statementSelect.setInt(1, x);
+            statementSelect.setInt(2, y);
+            final ResultSet rs = statementSelect.executeQuery();
+            if(rs.next()){
+                final Long id = rs.getLong("id");
+                item.setId(id);
+            } else {
+                throw new RuntimeException("Insert Failed!!!");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        return item;
     }
 
     @Override
-    public Point update(Point item) {
-        return null;
+    public void update(Point item) {
+
     }
 
     @Override
-    public Point delete(Point item) {
+    public void delete(Point item) {
         final String sql = "delete from point where id=?";
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(sql);
@@ -42,7 +61,6 @@ public class PointCrudRepository implements CrudRepository<Point> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     @Override
