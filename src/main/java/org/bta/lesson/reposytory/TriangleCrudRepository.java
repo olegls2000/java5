@@ -14,7 +14,7 @@ public class TriangleCrudRepository implements CrudRepository<Triangle>{
 
     @Override
     public Triangle create(Triangle item) {
-        final String sqlInsert = "insert into point (a_id, b_id, c_id) values (?, ?, ?)";
+        final String sqlInsert = "insert into triangle (a_id, b_id, c_id) values (?, ?, ?)";
         final String sqlSelect = "select id from triangle where a_id =? and b_id =? and c_id =?";
         final Long a_id = item.getA().getId();
         final Long b_id = item.getB().getId();
