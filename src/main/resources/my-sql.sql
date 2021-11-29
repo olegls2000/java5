@@ -47,6 +47,10 @@ create table triangle
 	c_id int not null references point(id),
 	unique (a_id, b_id, c_id)
 );
+insert into triangle (a_id, b_id, c_id) values ( 1, 2, 3);
+select * from point;
+select * from triangle;
+
 
 insert into POINT ( x, y) values ( -4, -4);
 insert into POINT (x, y) values ( -5, -5);
@@ -75,6 +79,7 @@ insert into citizen (firstName, lastName, birth_day, city_id) values (
 select * from country;
 select * from city;
 select * from citizen;
+select * from triangle;
 
 select ci.name
 from city ci

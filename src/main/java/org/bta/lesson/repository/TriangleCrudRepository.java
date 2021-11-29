@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class TriangleRepository implements
+public class TriangleCrudRepository implements
         CrudRepository<Triangle> {
 
     private static final String URL = "jdbc:postgresql://localhost:5433/um";
@@ -26,8 +26,11 @@ public class TriangleRepository implements
              PreparedStatement statementInsert = connection.prepareStatement(sqlInsert);
              PreparedStatement statementSelect = connection.prepareStatement(sqlSelect);
         ) {
-    //....
-        }  catch (SQLException e) {
+            statementInsert.setLong(1, aId);
+            statementInsert.setLong(2, bId);
+            statementInsert.setLong(3, cId);
+            statementInsert.executeUpdate();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return item;

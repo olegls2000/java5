@@ -10,7 +10,7 @@ public class Triangle {
     private Point c;
 
     public Triangle(Point one, Point two, Point three) throws InvalidTriangleException {
-        pointOneLineCheck(one, two, three);
+       // pointOneLineCheck(one, two, three);
         this.a = one;
         this.b = two;
         this.c = three;
