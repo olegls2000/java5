@@ -15,7 +15,7 @@ public class ClassWork {
         Slave joe = new Slave(800, "Joe");
 
         //joe.someSecretMethod();
-        final var clazz = joe.getClass();
+        final Class clazz = joe.getClass();
         final Class clazz1 = Slave.class;
         BtaUtils.printArray(clazz.getMethods());
         BtaUtils.printArray(clazz.getDeclaredMethods());
@@ -26,7 +26,7 @@ public class ClassWork {
 
         Circle circle = new Circle();
         BtaReflectionUtils.invokeMethod(circle, "SeCrET");
-        final var processor = new BtaNumberProcessor();
+        final BtaNumberProcessor processor = new BtaNumberProcessor();
         Point point1 = new Point(2, 5);
         Point point2 = new Point(999, 888);
         processor.process(point1);

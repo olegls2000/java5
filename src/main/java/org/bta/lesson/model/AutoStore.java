@@ -9,7 +9,7 @@ public class AutoStore {
     private Car[] parking;
 
     public AutoStore() {
-        final var scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.println("Please input initial balance for Auto Store");
         this.balance = scanner.nextInt();
         System.out.println("Please input initial parking slots amount for Auto Store");

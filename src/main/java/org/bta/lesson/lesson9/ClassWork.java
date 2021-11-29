@@ -11,7 +11,7 @@ public class ClassWork {
         Car bmw = new Car(3000, 1500);
         Car toyota = new Car(5000, 1500);
         Car honda = new Car(6000, 1500);
-        final var autoStore = new AutoStore();
+        final AutoStore autoStore = new AutoStore();
         autoStore.buyAuto(bmw);
         autoStore.buyAuto(toyota);
         autoStore.buyAuto(honda);
