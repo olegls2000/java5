@@ -43,13 +43,14 @@ public class TriangleCrudRepository implements CrudRepository{
     @Override
     public void create(Triangle item) throws SQLException {
         final String sql = "insert into triangle (a_id, b_id, c_id) values (?,?,?)";
-        try(Connection connection = DriverManager.getConnection((URL, USERNAME, PASSWORD);
+        try(Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             PreparedStatement statement = connection.prepareStatement(sql)
         ){
             statement.setLong(1,item.getA().getId());
             statement.setLong(2,item.getB().getId());
             statement.setLong(3,item.getC().getId());
             statement.executeUpdate(sql);
+
         }catch(SQLException e){
             e.printStackTrace();
         }
