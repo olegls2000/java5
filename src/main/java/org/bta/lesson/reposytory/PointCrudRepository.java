@@ -28,13 +28,13 @@ public class PointCrudRepository implements CrudRepository<Point> {
             statement.setInt(1, item.getX());
             statement.setInt(2, item.getY());
             int affectedRow = statement.executeUpdate();
-            if(affectedRow != 1) {
+            if (affectedRow != 1) {
                 throw new RuntimeException("Insert failed!!!");
             }
             statementSelect.setInt(1, item.getX());
             statementSelect.setInt(2, item.getY());
             ResultSet rs = statementSelect.executeQuery();
-            if(rs.next()) {
+            if (rs.next()) {
                 final Long id = rs.getLong("id");
                 item.setId(id);
             } else {
@@ -49,7 +49,21 @@ public class PointCrudRepository implements CrudRepository<Point> {
 
     @Override
     public void update(Point item) {
+        final String sql = "update point where id = ?;";
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+             PreparedStatement ps = connection.prepareStatement(sql)) {
 
+            ps.setInt(1, item.getX());
+            ps.setInt(2, item.getY());
+
+            int executeUpdate = ps.executeUpdate();
+
+            if (executeUpdate == 1) {
+                System.out.println("Point is updated");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -58,7 +72,7 @@ public class PointCrudRepository implements CrudRepository<Point> {
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(sql);
         ) {
-            statement.setLong(0, item.getId());
+            statement.setLong(1, item.getId());
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
