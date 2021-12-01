@@ -94,8 +94,7 @@ public class TriangleCrudRepository implements CrudRepository<Triangle> {
 
     @Override
     public Collection<Point> selectAll() {
-        return null;
-    }
+
     final Collection<Point> result = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
     Statement statement = connection.createStatement();
