@@ -53,7 +53,7 @@ public class TriangleCrudRepository implements CrudRepository<Triangle> {
     @Override
     public void update(Triangle item) {
 
-        final String sql = "update point where id = ?;";
+        final String sql = "update point where id = ?";
         final Long a_id = item.getA().getId();
         final Long b_id = item.getB().getId();
         final Long c_id = item.getC().getId();
@@ -77,15 +77,10 @@ public class TriangleCrudRepository implements CrudRepository<Triangle> {
     @Override
     public void delete(Triangle item) {
         final String sql = "delete from point where id=?";
-        final Long a_id = item.getA().getId();
-        final Long b_id = item.getB().getId();
-        final Long c_id = item.getC().getId();
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(sql);
         ) {
-            statement.setLong(1, a_id);
-            statement.setLong(2, b_id);
-            statement.setLong(3, c_id);
+            statement.setLong(1, item.getId());
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();

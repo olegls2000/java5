@@ -25,13 +25,13 @@ public class PointCrudRepository implements CrudRepository<Point> {
         ) {
 
 
-            statement.setInt(1, item.getX());
+            statement.setInt(1, x);
             statement.setInt(2, item.getY());
             int affectedRow = statement.executeUpdate();
             if (affectedRow != 1) {
                 throw new RuntimeException("Insert failed!!!");
             }
-            statementSelect.setInt(1, item.getX());
+            statementSelect.setInt(1, x);
             statementSelect.setInt(2, item.getY());
             ResultSet rs = statementSelect.executeQuery();
             if (rs.next()) {
@@ -49,15 +49,13 @@ public class PointCrudRepository implements CrudRepository<Point> {
 
     @Override
     public void update(Point item) {
-        final String sql = "update point where id = ?;";
+        final String sql = "update point set x=?, y=? where id = ?";
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement ps = connection.prepareStatement(sql)) {
-
             ps.setInt(1, item.getX());
             ps.setInt(2, item.getY());
-
+            ps.setLong(3, item.getId());
             int executeUpdate = ps.executeUpdate();
-
             if (executeUpdate == 1) {
                 System.out.println("Point is updated");
             }
@@ -104,6 +102,10 @@ public class PointCrudRepository implements CrudRepository<Point> {
     @Override
     public Point findOne(Long id) {
 
+        return null;
+    }
+
+    public Collection<Point> findByX(int x) {
         return null;
     }
 }
